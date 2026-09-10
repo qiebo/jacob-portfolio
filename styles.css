@@ -1031,7 +1031,10 @@ a {
 }
 
 .poster-card.small img {
-  min-height: 260px;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 9 / 16;
+  flex: 0 0 auto;
 }
 
 .poster-copy {
