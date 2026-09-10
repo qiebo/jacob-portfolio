@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="JACOB 的个人作品集：AI 应用、软硬件原型、知识系统与工作成果。">
     <title>JACOB / Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=3">
   </head>
   <body>
     <div class="site-shell">
@@ -15,65 +15,87 @@
           <a href="#work">案例</a>
           <a href="#capabilities">能力</a>
           <a href="#recognition">履历</a>
-          <a href="#about">关于我</a>
+          <a href="#about">关于</a>
         </nav>
-        <div class="header-stamp"><span class="status-dot"></span>PUBLIC BUILD · 2026</div>
+        <div class="header-meta"><span class="status-dot"></span>WORK / 2026</div>
       </header>
 
       <main>
         <section class="hero" id="top">
-          <div>
-            <p class="eyebrow">AI APPLICATIONS / PRODUCT PROTOTYPES / KNOWLEDGE SYSTEMS</p>
-            <h1>复杂问题<br><em>的产品化</em><br>与可视化。</h1>
-            <p class="hero-lead">我把硬件、软件、知识和工作流，整理成可理解、可展示、可复用的成果。</p>
+          <div class="hero-copy">
+            <p class="eyebrow">JACOB / AI &amp; PRODUCT PRACTICE</p>
+            <h1>把复杂的事情，<br><span>做成可以被理解的成果。</span></h1>
+            <p class="hero-lead">软硬件原型、知识系统、AI 工作流，以及真实工作中的成果记录。</p>
             <div class="hero-actions">
-              <a class="button primary" href="#work">浏览案例</a>
-              <a class="button" href="#recognition">查看履历</a>
+              <a class="button primary" href="#work">浏览精选案例</a>
+              <a class="inline-link" href="#about">了解我的工作方式</a>
+            </div>
+            <div class="hero-signature">
+              <div><span>Focus</span><strong>硬件 · AI · 知识 · 交付</strong></div>
+              <div><span>Approach</span><strong>理解 → 原型 → 验证</strong></div>
             </div>
           </div>
-          <div class="hero-board" aria-label="作品集定位">
-            <div class="board-top"><span>FIELD NOTES / 001</span><span>JACOB</span></div>
-            <h2 class="board-title">从一个想法<br>到一个<span>可运行的东西</span></h2>
-            <div class="board-line"></div>
-            <div class="board-list">
-              <div><i></i>软硬件协同原型</div>
-              <div><i></i>个人知识系统</div>
-              <div><i></i>AI 工作流与业务工具</div>
-              <div><i></i>工作成果与组织认可</div>
+
+          <div class="hero-visual" aria-label="桌面数智人一体机真实照片">
+            <div class="hero-image-main">
+              <img src="assets/desktop-digital-human/runtime-avatar.png" alt="桌面数智人一体机运行界面" width="900" height="1200">
             </div>
+            <div class="hero-image-secondary">
+              <img src="assets/desktop-digital-human/exterior-side.png" alt="桌面数智人一体机外观" width="900" height="1200">
+            </div>
+            <div class="hero-photo-tag">01 / DESKTOP DIGITAL HUMAN</div>
           </div>
         </section>
 
-        <section class="section light" id="work">
+        <section class="section" id="work">
           <div class="section-heading">
             <div>
-              <p class="label">01 / SELECTED WORK</p>
-              <h2>项目不是文件夹，<br>而是一条可以讲清楚的路径。</h2>
+              <p class="label">01 / SELECTED CASES</p>
+              <h2>每个案例，都从一个真实问题开始。</h2>
             </div>
-            <p>每个案例都会说明问题、判断、成果、个人贡献和公开边界。仓库只展示内容，不公开项目源码。</p>
+            <p>用产品、系统和工作成果，呈现我如何理解问题、组织材料并推进落地。</p>
           </div>
 
-          <div class="case-grid">
-            <a class="case-card dark" href="cases/desktop-digital-human.html">
-              <div><span class="case-number">01 / PRODUCT PRACTICE</span><h3>桌面数智人一体机</h3><p>从外观、结构、硬件集成到AI交互的软硬件协同原型。</p></div>
-              <span class="case-link">查看公开案例</span>
+          <a class="feature-case" href="cases/desktop-digital-human.html">
+            <div class="feature-case-media">
+              <img src="assets/desktop-digital-human/runtime-avatar.png" alt="桌面数智人一体机亮屏运行状态" loading="lazy" width="1200" height="1600">
+            </div>
+            <div class="feature-case-copy">
+              <span class="case-number">01 / PRODUCT PRACTICE</span>
+              <h3>桌面数智人一体机</h3>
+              <p>从外观、结构、硬件集成到 AI 交互，把一个桌面数字人想法推进成可以运行的真实设备。</p>
+              <ul class="tag-list">
+                <li>软硬件协同</li>
+                <li>产品原型</li>
+                <li>Vibe Coding</li>
+              </ul>
+              <span class="arrow-link">查看完整案例</span>
+            </div>
+          </a>
+
+          <div class="text-case-grid">
+            <a class="text-case" href="cases/x-bookmarks.html">
+              <span class="case-number">02 / KNOWLEDGE SYSTEM</span>
+              <h3>X 书签知识库</h3>
+              <p>把长期收藏转化为可分类、可检索、可再次使用的个人知识系统。</p>
+              <span class="arrow-link">查看案例</span>
             </a>
-            <a class="case-card blue" href="cases/x-bookmarks.html">
-              <div><span class="case-number">02 / KNOWLEDGE SYSTEM</span><h3>X 书签知识库</h3><p>把长期收藏转化为可分类、可检索、可持续维护的个人知识系统。</p></div>
-              <span class="case-link">查看公开案例</span>
+            <a class="text-case" href="cases/ai-workflows.html">
+              <span class="case-number">03 / WORKFLOW DESIGN</span>
+              <h3>AI 工作流与 Skill</h3>
+              <p>围绕真实工作场景，把重复流程整理成可复用、可验证的方法。</p>
+              <span class="arrow-link">查看案例</span>
             </a>
-            <a class="case-card" href="cases/ai-workflows.html">
-              <div><span class="case-number">03 / WORKFLOW DESIGN</span><h3>AI 工作流与 Skill</h3><p>围绕真实工作场景，将重复流程整理为可复用、可验证的工具化方法。</p></div>
-              <span class="case-link">查看公开案例</span>
-            </a>
-            <a class="case-card orange" href="cases/recognition.html">
-              <div><span class="case-number">04 / PROFESSIONAL RECORD</span><h3>履历与荣誉</h3><p>记录公司评选、AI赋能实践和其他能够证明工作成果的正式证据。</p></div>
-              <span class="case-link">查看履历记录</span>
+            <a class="text-case" href="cases/recognition.html">
+              <span class="case-number">04 / PROFESSIONAL RECORD</span>
+              <h3>履历与工作成果</h3>
+              <p>公司评选、AI 赋能实践和正式工作成果，作为履历证据被单独记录。</p>
+              <span class="arrow-link">查看履历</span>
             </a>
           </div>
         </section>
 
-        <section class="section" id="capabilities">
+        <section class="section capability-section" id="capabilities">
           <div class="section-heading">
             <div>
               <p class="label">02 / CAPABILITY MAP</p>
@@ -90,46 +112,45 @@
         </section>
 
         <section class="section" id="recognition">
-          <div class="recognition-strip">
-            <div class="recognition-main">
-              <span class="label">03 / PROFESSIONAL RECORD</span>
-              <h3>被组织看见的成果，属于履历，不是装饰。</h3>
-              <p>公司评选、AI赋能实践和正式工作成果会被放在对应项目旁边，作为经过组织认可的证据。</p>
+          <div class="section-heading">
+            <div>
+              <p class="label">03 / PROFESSIONAL RECORD</p>
+              <h2>海报在这里代表履历，不是视觉练习。</h2>
             </div>
-            <div class="recognition-side">
-              <span class="label">PUBLIC BOUNDARY</span>
-              <p>公开版本只展示经过脱敏的说明、截图与证明材料。源代码、内部配置和敏感信息不在这里。</p>
-              <a class="button" href="cases/recognition.html">打开履历页</a>
+            <p>把评选名称、成果背景和组织反馈放在一起，招聘者才能看见它的分量。</p>
+          </div>
+          <div class="record-preview">
+            <div class="record-image">
+              <img src="assets/recognition/ai-innovation-award.jpg" alt="百万加冕 AI 评选获奖海报" loading="lazy" width="900" height="1200">
+            </div>
+            <div class="record-copy">
+              <span class="case-number">AI INNOVATION AWARD</span>
+              <h3>工作成果被正式评选、被组织看见。</h3>
+              <p>这里收录公司评选获奖海报与 AI 岗位赋能相关材料，并将它们放回真实工作背景中呈现。后续会继续补充时间、个人贡献与关联项目。</p>
+              <a class="button" href="cases/recognition.html">打开履历记录</a>
             </div>
           </div>
         </section>
 
-        <section class="section light" id="about">
+        <section class="section" id="about">
           <div class="section-heading">
             <div>
               <p class="label">04 / ABOUT</p>
-              <h2>我关心的不只是把东西做出来，<br>也关心它能不能被理解和复用。</h2>
+              <h2>我关心的不只是把东西做出来，也关心它能不能被理解和复用。</h2>
             </div>
-            <p>这是一个持续更新的个人档案。随着案例补充，页面会逐步加入更完整的经历、项目时间线和联系方式。</p>
+            <p>这是一个持续更新的个人档案。案例会从“看得见”开始，再逐步补充完整的过程与结果。</p>
           </div>
-          <div class="recognition-strip">
-            <div class="recognition-main">
-              <span class="label">WORKING STYLE</span>
-              <h3>理解问题，组织信息，做出原型，留下证据。</h3>
-              <p>我的实践横跨AI应用、软硬件原型、知识系统和业务工作流。作品集会把这些经历放在同一条可阅读的路径上。</p>
-            </div>
-            <div class="recognition-side">
-              <span class="label">NEXT UPDATE</span>
-              <p>下一轮内容将优先补充桌面数智人一体机的外观、架构和交互材料，再补充X书签知识库与精选工作流案例。</p>
-              <a class="button" href="https://github.com/qiebo/jacob-portfolio">查看GitHub仓库</a>
-            </div>
+          <div class="about-grid">
+            <p class="about-lead">理解问题，组织信息，做出原型，留下证据。</p>
+            <p class="about-note"><strong>工作重点</strong>AI 应用、软硬件原型、知识系统、业务工作流与内容交付。</p>
+            <p class="about-note"><strong>下一步</strong>继续补充 X 书签知识库的界面材料，以及精选 Skill 的实际使用案例。</p>
           </div>
         </section>
       </main>
 
       <footer class="footer">
         <span>JACOB / PORTFOLIO <span data-year></span></span>
-        <span>CONTENT FIRST · SOURCE EXCLUDED</span>
+        <span>AI · PRODUCT · PRACTICE</span>
       </footer>
     </div>
     <script src="script.js"></script>

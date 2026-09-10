@@ -31,6 +31,9 @@ coverage/
 *.tmp
 preview-*.png
 
+# Optimized public poster copies are tracked as JPG; keep the heavier source exports local.
+assets/recognition/*.png
+
 # OS files
 .DS_Store
 Thumbs.db
