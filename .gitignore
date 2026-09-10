@@ -1,0 +1,37 @@
+# Local and private materials
+private-materials/
+raw-materials/
+internal/
+公司评选海报/
+桌面数智人一体机/
+公司skill.txt
+*.local
+*.private
+
+# Credentials and secrets
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+*.secret
+credentials.*
+secrets.*
+
+# Source and build artefacts that should not enter the public portfolio
+node_modules/
+dist/
+build/
+coverage/
+*.zip
+*.7z
+*.rar
+*.bak
+*.tmp
+preview-*.png
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
