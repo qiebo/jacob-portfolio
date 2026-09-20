@@ -3,182 +3,315 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="JACOB 的个人作品集：AI 应用、软硬件原型、知识系统与工作成果。">
-    <title>JACOB / Portfolio</title>
+    <meta name="description" content="Jacob 的个人作品集：4 个独立完成的 AI 项目，覆盖软件、硬件、知识系统与工作流，附完整过程与可验证的结果。">
+    <meta name="theme-color" content="#0f1014">
+    <title>Jacob · 个人作品集</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='3' y='3' width='10' height='10' fill='%232447e0'/%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=6">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=10">
   </head>
   <body>
-    <div class="site-shell">
-      <header class="site-header">
-        <a class="brand" href="#top">
-          <span class="brand-seal">杰</span>
-          <span class="brand-text">JACOB<span> / </span>PORTFOLIO</span>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="#top" aria-label="返回顶部">
+          <span class="brand-name">JACOB</span>
+          <span class="brand-sub">PORTFOLIO</span>
         </a>
         <nav class="nav" aria-label="主导航">
-          <a href="#work">案例</a>
+          <a href="#work">项目</a>
           <a href="#capabilities">能力</a>
-          <a href="#recognition">履历</a>
+          <a href="#recognition">认可</a>
           <a href="#about">关于</a>
         </nav>
-        <div class="header-meta"><span class="status-dot"></span>2026</div>
-      </header>
+        <a class="header-gh" href="https://github.com/qiebo" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </header>
 
-      <main>
-        <!-- ======================== HERO ======================== -->
-        <section class="hero" id="top">
-          <p class="hero-eyebrow">JACOB / AI &amp; PRODUCT PRACTICE</p>
-          <h1>把复杂的事情，<br><span class="accent">做成可以被理解的成果。</span></h1>
-          <p class="hero-lead">软硬件原型、AI 应用、知识系统与真实工作成果。从理解问题到交付验证，记录每一个项目从想法到落地的完整过程。</p>
-          <div class="hero-actions">
-            <a class="button primary" href="#work">浏览案例</a>
-            <a class="inline-link" href="#about">了解我的工作方式</a>
+    <main id="top">
+      <!-- ============ Hero ============ -->
+      <section class="hero-band">
+        <div class="hero wrap">
+          <div class="hero-copy">
+            <p class="eyebrow">Jacob · 独立 AI 产品开发者</p>
+            <h1>把 AI 带进<br>真实世界。</h1>
+            <p class="hero-lead">我相信，AI 的价值要到真实世界里才算数。所以从一行代码到一台整机，从模型到交互，这里的每个项目都由我独立完成——点开它们，你会看到一个想法如何一步步长成能用的产品。</p>
+            <div class="hero-actions">
+              <a class="btn" href="#work">查看 4 个项目</a>
+              <a class="btn-ghost" href="#recognition">我的工作成果</a>
+            </div>
+            <ul class="hero-facts">
+              <li><b>4</b><span>个完整项目</span></li>
+              <li><b>2</b><span>项公司级认可</span></li>
+              <li><b>全栈</b><span>独立交付</span></li>
+            </ul>
           </div>
-          <div class="hero-signature">
-            <div><span>Focus</span><strong>硬件 · AI · 知识 · 交付</strong></div>
-            <div><span>Approach</span><strong>理解 → 原型 → 验证</strong></div>
+          <div class="hero-side">
+            <div class="hero-tiles" aria-label="项目速览">
+              <a class="tile" href="cases/desktop-digital-human.html">
+                <img src="assets/desktop-digital-human/runtime-avatar.png" alt="桌面数智人一体机运行实拍" width="540" height="720" fetchpriority="high">
+              </a>
+              <a class="tile" href="cases/x-bookmarks.html">
+                <img src="assets/x-bookmarks/graph-view.png" alt="X 知识库的 Obsidian 图谱视图" loading="lazy">
+              </a>
+              <a class="tile tile-soft" href="cases/child-ai-companion.html">
+                <img src="assets/child-ai-companion/mascot.png" alt="逗包 · 儿童 AI 伴侣吉祥物" loading="lazy">
+              </a>
+              <a class="tile" href="cases/ai-workflows.html">
+                <svg viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="AI 工作流示意图">
+                  <rect width="200" height="200" fill="#edf0f4"/>
+                  <path d="M100 44 V78 M156 100 H122 M100 156 V122 M44 100 H78" stroke="#2447e0" stroke-width="1.6"/>
+                  <rect x="82" y="82" width="36" height="36" rx="8" fill="#2447e0"/>
+                  <rect x="86" y="30" width="28" height="14" rx="4" fill="#ffffff" stroke="#2447e0" stroke-width="1.3"/>
+                  <rect x="142" y="93" width="28" height="14" rx="4" fill="#ffffff" stroke="#2447e0" stroke-width="1.3"/>
+                  <rect x="86" y="156" width="28" height="14" rx="4" fill="#ffffff" stroke="#2447e0" stroke-width="1.3"/>
+                  <rect x="30" y="93" width="28" height="14" rx="4" fill="#ffffff" stroke="#2447e0" stroke-width="1.3"/>
+                  <text x="100" y="186" text-anchor="middle" font-family="Space Grotesk, monospace" font-size="10" letter-spacing="3" fill="#2447e0">WORKFLOW</text>
+                </svg>
+              </a>
+            </div>
+            <p class="hero-tiles-cap">四个项目 · 点图直达案例</p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!-- ======================== 精选案例 ======================== -->
-        <section class="section" id="work">
-          <div class="section-heading">
-            <p class="label">01 / SELECTED CASES</p>
-            <h2>每个案例，都从一个真实问题开始。</h2>
-            <p>用产品、系统和工作成果，呈现我如何理解问题、组织材料并推进落地。</p>
+      <!-- ============ 精选项目 ============ -->
+      <section class="section" id="work">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="label"><b>01</b> / 精选项目</p>
+            <h2>每个项目，都解决一个真实问题。</h2>
+            <p>从硬件设备到 AI 应用，从知识系统到工作方法——点开任意一个，可以看到完整的过程与结果。</p>
           </div>
 
-          <div class="case-list">
+          <div class="work-list">
 
-            <!-- 01 桌面数智人 -->
-            <a class="case-row" href="cases/desktop-digital-human.html">
-              <div>
-                <span class="case-row-number">01 / PRODUCT PRACTICE</span>
-                <h3>桌面数智人一体机</h3>
-                <p>从外观、结构、硬件集成到 AI 交互，把一个桌面数字人想法推进成可以运行的真实设备。</p>
-                <ul class="case-row-tags">
-                  <li>软硬件协同</li>
-                  <li>产品原型</li>
-                  <li>Vibe Coding</li>
-                </ul>
-                <span class="case-row-link">查看案例</span>
-              </div>
-              <div class="case-row-thumb">
+            <a class="work-card" href="cases/desktop-digital-human.html">
+              <div class="work-media">
                 <img src="assets/desktop-digital-human/runtime-avatar.png" alt="桌面数智人一体机运行界面" loading="lazy">
               </div>
-            </a>
-
-            <!-- 02 逗包 -->
-            <a class="case-row" href="cases/child-ai-companion.html">
-              <div>
-                <span class="case-row-number">02 / AI APPLICATION</span>
-                <h3>逗包 · 儿童 AI 伴侣</h3>
-                <p>可私有部署的低刺激 AI 陪伴助手。面向儿童的学习、提问、图片作业辅导与日常聊天。数据不出局域网，支持 Android App、浏览器与 PWA。</p>
-                <ul class="case-row-tags">
-                  <li>Node.js + React</li>
-                  <li>OpenAI-compatible</li>
-                  <li>私有部署</li>
-                  <li>儿童安全</li>
+              <div class="work-body">
+                <span class="work-index"><b>01</b> · 软硬件产品</span>
+                <h3>桌面数智人一体机</h3>
+                <p>从外观结构、硬件集成到 AI 交互，把一个数字人概念推进成一台真实运行的桌面设备。</p>
+                <ul class="work-tags">
+                  <li>产品原型</li>
+                  <li>硬件集成</li>
+                  <li>RK3576</li>
+                  <li>Linux</li>
                 </ul>
-                <span class="case-row-link">查看案例</span>
-              </div>
-              <div class="case-row-thumb app">
-                <img src="assets/child-ai-companion/android-home-new-conversation.png" alt="逗包 App 主界面" loading="lazy">
+                <span class="work-link">查看项目 <span class="arr">→</span></span>
               </div>
             </a>
 
-            <!-- 03 X书签 -->
-            <a class="case-row" href="cases/x-bookmarks.html">
-              <div>
-                <span class="case-row-number">03 / KNOWLEDGE SYSTEM</span>
-                <h3>X 书签知识库</h3>
-                <p>把长期收藏转化为可分类、可检索、可再次使用的个人知识系统。</p>
-                <span class="case-row-link">查看案例</span>
+            <a class="work-card" href="cases/child-ai-companion.html">
+              <div class="work-media soft">
+                <img src="assets/child-ai-companion/mascot.png" alt="逗包吉祥物：一朵微笑的云" loading="lazy">
+              </div>
+              <div class="work-body">
+                <span class="work-index"><b>02</b> · AI 应用</span>
+                <h3>逗包 · 儿童 AI 伴侣</h3>
+                <p>可私有部署的儿童 AI 陪伴应用：数据不出局域网，多层内容安全策略，家长全程可控。</p>
+                <ul class="work-tags">
+                  <li>Node.js</li>
+                  <li>React</li>
+                  <li>SQLite</li>
+                  <li>私有部署</li>
+                </ul>
+                <span class="work-link">查看项目 <span class="arr">→</span></span>
               </div>
             </a>
 
-            <!-- 04 AI工作流 -->
-            <a class="case-row" href="cases/ai-workflows.html">
-              <div>
-                <span class="case-row-number">04 / WORKFLOW DESIGN</span>
+            <a class="work-card" href="cases/x-bookmarks.html">
+              <div class="work-media">
+                <img src="assets/x-bookmarks/graph-view.png" alt="X 知识库的 Obsidian 图谱：主题、作者与卡片构成的网络" loading="lazy">
+              </div>
+              <div class="work-body">
+                <span class="work-index"><b>03</b> · 知识系统</span>
+                <h3>X 知识库</h3>
+                <p>1,120+ 条收藏经只读采集管道沉淀为知识卡片，在 Obsidian 图谱里可分类、可检索、可漫游。</p>
+                <ul class="work-tags">
+                  <li>采集管道</li>
+                  <li>知识管理</li>
+                  <li>Obsidian</li>
+                </ul>
+                <span class="work-link">查看项目 <span class="arr">→</span></span>
+              </div>
+            </a>
+
+            <a class="work-card" href="cases/ai-workflows.html">
+              <div class="work-media">
+                <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice" role="img" aria-label="工作流示意图：输入、规则、执行、验证">
+                  <defs>
+                    <pattern id="wf-dots" width="24" height="24" patternUnits="userSpaceOnUse">
+                      <circle cx="2" cy="2" r="1.4" fill="#d6dae3"/>
+                    </pattern>
+                  </defs>
+                  <rect width="480" height="300" fill="#edf0f4"/>
+                  <rect width="480" height="300" fill="url(#wf-dots)"/>
+                  <path d="M30 150 H446" stroke="#2447e0" stroke-width="1.6"/>
+                  <path d="M446 150 l-11 -5.5 v11 Z" fill="#2447e0"/>
+                  <g font-family="Space Grotesk, monospace" font-size="11" letter-spacing="2" fill="#2447e0" text-anchor="middle">
+                    <text x="90" y="106">01</text>
+                    <text x="190" y="106">02</text>
+                    <text x="290" y="106">03</text>
+                    <text x="390" y="106">04</text>
+                  </g>
+                  <g font-family="Noto Sans SC, sans-serif" font-size="14" text-anchor="middle">
+                    <rect x="52" y="126" width="76" height="48" rx="9" fill="#ffffff" stroke="#2447e0" stroke-width="1.4"/>
+                    <text x="90" y="155" fill="#111318">输入</text>
+                    <rect x="152" y="126" width="76" height="48" rx="9" fill="#ffffff" stroke="#2447e0" stroke-width="1.4"/>
+                    <text x="190" y="155" fill="#111318">规则</text>
+                    <rect x="252" y="126" width="76" height="48" rx="9" fill="#ffffff" stroke="#2447e0" stroke-width="1.4"/>
+                    <text x="290" y="155" fill="#111318">执行</text>
+                    <rect x="352" y="126" width="76" height="48" rx="9" fill="#2447e0"/>
+                    <text x="390" y="155" fill="#ffffff">验证</text>
+                  </g>
+                </svg>
+              </div>
+              <div class="work-body">
+                <span class="work-index"><b>04</b> · 方法产品化</span>
                 <h3>AI 工作流与 Skill</h3>
-                <p>围绕真实工作场景，把重复流程整理成可复用、可验证的方法。</p>
-                <span class="case-row-link">查看案例</span>
-              </div>
-            </a>
-
-            <!-- 05 履历 -->
-            <a class="case-row" href="cases/recognition.html">
-              <div>
-                <span class="case-row-number">05 / PROFESSIONAL RECORD</span>
-                <h3>履历与工作成果</h3>
-                <p>公司评选、AI 赋能实践和正式工作成果，作为履历证据被单独记录。</p>
-                <span class="case-row-link">查看履历</span>
+                <p>把重复性业务工作沉淀为输入清晰、过程可控、结果可验证的 AI 工作流。</p>
+                <ul class="work-tags">
+                  <li>流程设计</li>
+                  <li>提示词工程</li>
+                  <li>可复用方法</li>
+                </ul>
+                <span class="work-link">查看项目 <span class="arr">→</span></span>
               </div>
             </a>
 
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!-- ======================== 能力矩阵 ======================== -->
-        <section class="section" id="capabilities">
-          <div class="section-heading">
-            <p class="label">02 / CAPABILITY MAP</p>
-            <h2>四个入口，指向同一种工作方式。</h2>
-            <p>理解问题，组织信息，做出原型，留下可验证的结果。</p>
+      <!-- ============ 能力 ============ -->
+      <section class="section" id="capabilities">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="label"><b>02</b> / 能力</p>
+            <h2>从定义问题，到交付验证。</h2>
+            <p>四个方向的能力，指向同一件事：让方案落地成可以运行的结果。</p>
           </div>
-          <div class="capability-section">
-            <div class="capability-grid">
-              <div class="capability"><span class="case-number">A</span><strong>理解硬件</strong><p>从外壳、主板、屏幕、音频、电池和散热看到产品如何真正运行。</p></div>
-              <div class="capability"><span class="case-number">B</span><strong>组织知识</strong><p>把分散收藏、文档与经验整理成有结构的检索系统。</p></div>
-              <div class="capability"><span class="case-number">C</span><strong>设计工作流</strong><p>把重复性工作变成输入清晰、过程可控、结果可交接的工具。</p></div>
-              <div class="capability"><span class="case-number">D</span><strong>表达成果</strong><p>让复杂项目在页面、演示、履历和证据中被快速理解。</p></div>
+          <div class="cap-grid">
+            <div class="cap-card">
+              <span class="num">A</span>
+              <h3>产品定义</h3>
+              <p>从真实场景出发拆解问题，判断什么值得做、先做什么、做到什么程度。</p>
+            </div>
+            <div class="cap-card">
+              <span class="num">B</span>
+              <h3>全栈交付</h3>
+              <p>独立完成前端、后端、部署乃至硬件集成，让方案可以被真实使用验证。</p>
+            </div>
+            <div class="cap-card">
+              <span class="num">C</span>
+              <h3>AI 应用设计</h3>
+              <p>模型接入、提示词策略、安全边界与交互体验的一体化设计。</p>
+            </div>
+            <div class="cap-card">
+              <span class="num">D</span>
+              <h3>知识沉淀</h3>
+              <p>把经验整理成可检索的知识系统与可复用的工作流，形成长期资产。</p>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!-- ======================== 履历预览 ======================== -->
-        <section class="section" id="recognition">
-          <div class="section-heading">
-            <p class="label">03 / PROFESSIONAL RECORD</p>
-            <h2>海报在这里代表履历，不是视觉练习。</h2>
-            <p>把评选名称、成果背景和组织反馈放在一起，招聘者才能看见它的分量。</p>
+      <!-- ============ 认可 ============ -->
+      <section class="section" id="recognition">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="label"><b>03</b> / 公司级认可</p>
+            <h2>工作成果，被正式看见。</h2>
+            <p>两项经过组织正式认可的成果：一次公司级评选获奖，一个面向全员的 AI 赋能角色。</p>
           </div>
-          <div class="record-preview">
-            <div class="record-thumb">
-              <img src="assets/recognition/ai-innovation-award.jpg" alt="百万加冕 AI 评选获奖海报" loading="lazy">
+          <div class="recog-grid">
+            <div class="recog-posters">
+              <figure>
+                <img src="assets/recognition/ai-innovation-award.jpg" alt="百万加冕 AI 评选获奖海报" loading="lazy">
+                <figcaption>AI 创新评选 · 官方海报</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/recognition/ai-enablement-plan.jpg" alt="智启新篇 AI 岗位赋能计划海报" loading="lazy">
+                <figcaption>AI 岗位赋能计划 · 官方海报</figcaption>
+              </figure>
             </div>
-            <div class="record-copy">
-              <h3>工作成果被正式评选、被组织看见。</h3>
-              <p>这里收录公司评选获奖海报与 AI 岗位赋能相关材料，并将它们放回真实工作背景中呈现。后续会继续补充时间、个人贡献与关联项目。</p>
-              <a class="button" href="cases/recognition.html">打开履历记录</a>
+            <div class="recog-copy">
+              <h3>从方案到奖项，从个人到组织。</h3>
+              <p>获奖方案里的方法后来沉淀成了可复用的工作流（见项目 04），赋能官的经历则把 AI 从个人提效推向团队日常——两件事是同一条线的两段。</p>
+              <ul class="recog-list">
+                <li>
+                  <span class="yr">AI Innovation</span>
+                  <div>
+                    <b>AI 创新方案入围奖 ·「百万加冕」评选</b>
+                    <span>参评方案「X-Agent 智能提效矩阵」：面向真实工作场景的全链路 AI 赋能设计</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="yr">AI Enablement</span>
+                  <div>
+                    <b>AI 岗位赋能官 ·「智启新篇」计划</b>
+                    <span>面向各岗位的 AI 实操课程与推广，推动 AI 在组织层面落地使用</span>
+                  </div>
+                </li>
+              </ul>
+              <p class="recog-note">上图均为官方物料原件，可提供佐证。</p>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!-- ======================== 关于 ======================== -->
-        <section class="section" id="about">
-          <div class="section-heading">
-            <p class="label">04 / ABOUT</p>
-            <h2>我关心的不只是把东西做出来，也关心它能不能被理解和复用。</h2>
+      <!-- ============ 关于 ============ -->
+      <section class="section" id="about">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="label"><b>04</b> / 关于</p>
+            <h2>关于我</h2>
           </div>
           <div class="about-grid">
-            <p class="about-lead">理解问题，组织信息，做出原型，留下证据。</p>
-            <div class="about-col">
-              <p class="about-note"><strong>工作重点</strong>AI 应用、软硬件原型、知识系统、业务工作流与内容交付。</p>
-              <p class="about-note"><strong>下一步</strong>继续补充 X 书签知识库的界面材料，以及精选 Skill 的实际使用案例。</p>
-            </div>
+            <p class="about-main">我相信"做出来"胜过"说起来"。无论是一台硬件设备，还是一套 AI 应用，我都习惯先做出能运行的版本，再在真实使用中打磨。这个作品集里的每个项目，都是这样完成的。</p>
+            <ul class="about-facts">
+              <li><b>关注方向</b><span>AI 应用 · 软硬件原型 · 知识系统</span></li>
+              <li><b>工作方式</b><span>定义问题 → 快速原型 → 真实验证</span></li>
+              <li><b>当前状态</b><span>持续更新项目与案例</span></li>
+            </ul>
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
 
-      <footer class="footer">
-        <span>JACOB / PORTFOLIO <span data-year></span></span>
-        <span>AI · PRODUCT · PRACTICE</span>
-      </footer>
+      <!-- ============ 联系 CTA ============ -->
+      <section class="cta-band">
+        <div class="wrap">
+          <p class="label"><b>Contact</b></p>
+          <h2>对我的经历感兴趣？</h2>
+          <p>欢迎访问我的 GitHub 查看更多项目细节，或通过简历中的联系方式与我沟通。</p>
+          <div class="cta-actions">
+            <a class="btn" href="https://github.com/qiebo" target="_blank" rel="noopener">访问 GitHub</a>
+            <a class="btn-ghost" href="#work">再看看项目</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap">
+        <span>© <span data-year>2026</span> Jacob · 个人作品集</span>
+        <a class="top-link" href="#top">回到顶部 ↑</a>
+      </div>
+    </footer>
+
+    <div class="lightbox" role="dialog" aria-modal="true" aria-label="查看大图">
+      <button class="lb-close" aria-label="关闭">✕</button>
+      <img alt="">
+      <p class="lb-cap"></p>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>
