@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="JACOB 的个人作品集：AI 应用、软硬件原型、知识系统与工作成果。">
     <title>JACOB / Portfolio</title>
-    <link rel="stylesheet" href="styles.css?v=4">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=5">
   </head>
   <body>
     <div class="site-shell">
       <header class="site-header">
-        <a class="brand" href="#top">JACOB<span>/</span>PORTFOLIO</a>
+        <a class="brand" href="#top">
+          <span class="brand-seal">杰</span>
+          <span class="brand-text">JACOB<span> / </span>PORTFOLIO</span>
+        </a>
         <nav class="nav" aria-label="主导航">
           <a href="#work">案例</a>
           <a href="#capabilities">能力</a>
@@ -21,11 +27,12 @@
       </header>
 
       <main>
+        <!-- ======================== HERO ======================== -->
         <section class="hero" id="top">
           <div class="hero-copy">
             <p class="eyebrow">JACOB / AI &amp; PRODUCT PRACTICE</p>
-            <h1>把复杂的事情，<br><span>做成可以被理解的成果。</span></h1>
-            <p class="hero-lead">软硬件原型、知识系统、AI 工作流，以及真实工作中的成果记录。</p>
+            <h1>把复杂的事情，<br><span class="accent">做成可以被理解的成果。</span></h1>
+            <p class="hero-lead">软硬件原型、AI 应用、知识系统与真实工作成果。从理解问题到交付验证，记录每一个项目从想法到落地的完整过程。</p>
             <div class="hero-actions">
               <a class="button primary" href="#work">浏览精选案例</a>
               <a class="inline-link" href="#about">了解我的工作方式</a>
@@ -41,12 +48,13 @@
               <img src="assets/desktop-digital-human/runtime-avatar.png" alt="桌面数智人一体机运行界面" width="900" height="1200">
             </div>
             <div class="hero-image-secondary">
-              <img src="assets/desktop-digital-human/exterior-side.png" alt="桌面数智人一体机外观" width="900" height="1200">
+              <img src="assets/child-ai-companion/mascot.png" alt="逗包 AI 朋友吉祥物" width="900" height="1200">
             </div>
-            <div class="hero-photo-tag">01 / DESKTOP DIGITAL HUMAN</div>
+            <div class="hero-photo-tag">01 / PRODUCT PRACTICE</div>
           </div>
         </section>
 
+        <!-- ======================== 精选案例 ======================== -->
         <section class="section" id="work">
           <div class="section-heading">
             <div>
@@ -56,6 +64,7 @@
             <p>用产品、系统和工作成果，呈现我如何理解问题、组织材料并推进落地。</p>
           </div>
 
+          <!-- 主推案例：桌面数智人 -->
           <a class="feature-case" href="cases/desktop-digital-human.html">
             <div class="feature-case-media">
               <img src="assets/desktop-digital-human/runtime-avatar.png" alt="桌面数智人一体机亮屏运行状态" loading="lazy" width="1200" height="1600">
@@ -73,21 +82,41 @@
             </div>
           </a>
 
+          <!-- 次推案例：儿童 AI 伴侣 -->
+          <a class="feature-case" href="cases/child-ai-companion.html" style="margin-top: 14px;">
+            <div class="feature-case-media" style="background: #1a1a2e;">
+              <img src="assets/child-ai-companion/android-home-new-conversation.png" alt="逗包 AI 朋友 App 主界面" loading="lazy" width="1200" height="1600">
+            </div>
+            <div class="feature-case-copy">
+              <span class="case-number">02 / AI APPLICATION</span>
+              <h3>逗包 · 儿童 AI 伴侣</h3>
+              <p>可私有部署的低刺激 AI 陪伴助手。面向儿童的学习、提问、图片作业辅导与日常聊天。数据不出局域网，支持 Android App、浏览器与 PWA。</p>
+              <ul class="tag-list">
+                <li>Node.js + React</li>
+                <li>OpenAI-compatible</li>
+                <li>私有部署</li>
+                <li>儿童安全</li>
+              </ul>
+              <span class="arrow-link">查看完整案例</span>
+            </div>
+          </a>
+
+          <!-- 三列次级案例 -->
           <div class="text-case-grid">
             <a class="text-case" href="cases/x-bookmarks.html">
-              <span class="case-number">02 / KNOWLEDGE SYSTEM</span>
+              <span class="case-number">03 / KNOWLEDGE SYSTEM</span>
               <h3>X 书签知识库</h3>
               <p>把长期收藏转化为可分类、可检索、可再次使用的个人知识系统。</p>
               <span class="arrow-link">查看案例</span>
             </a>
             <a class="text-case" href="cases/ai-workflows.html">
-              <span class="case-number">03 / WORKFLOW DESIGN</span>
+              <span class="case-number">04 / WORKFLOW DESIGN</span>
               <h3>AI 工作流与 Skill</h3>
               <p>围绕真实工作场景，把重复流程整理成可复用、可验证的方法。</p>
               <span class="arrow-link">查看案例</span>
             </a>
             <a class="text-case" href="cases/recognition.html">
-              <span class="case-number">04 / PROFESSIONAL RECORD</span>
+              <span class="case-number">05 / PROFESSIONAL RECORD</span>
               <h3>履历与工作成果</h3>
               <p>公司评选、AI 赋能实践和正式工作成果，作为履历证据被单独记录。</p>
               <span class="arrow-link">查看履历</span>
@@ -95,6 +124,7 @@
           </div>
         </section>
 
+        <!-- ======================== 能力矩阵 ======================== -->
         <section class="section capability-section" id="capabilities">
           <div class="section-heading">
             <div>
@@ -111,6 +141,7 @@
           </div>
         </section>
 
+        <!-- ======================== 履历预览 ======================== -->
         <section class="section" id="recognition">
           <div class="section-heading">
             <div>
@@ -132,13 +163,14 @@
           </div>
         </section>
 
+        <!-- ======================== 关于 ======================== -->
         <section class="section" id="about">
           <div class="section-heading">
             <div>
               <p class="label">04 / ABOUT</p>
               <h2>我关心的不只是把东西做出来，也关心它能不能被理解和复用。</h2>
             </div>
-            <p>这是一个持续更新的个人档案。案例会从“看得见”开始，再逐步补充完整的过程与结果。</p>
+            <p>这是一个持续更新的个人档案。案例会从"看得见"开始，再逐步补充完整的过程与结果。</p>
           </div>
           <div class="about-grid">
             <p class="about-lead">理解问题，组织信息，做出原型，留下证据。</p>

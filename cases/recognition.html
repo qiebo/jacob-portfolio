@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="JACOB 的公司评选、AI 赋能实践与工作成果记录。">
     <title>履历与工作成果 / JACOB</title>
-    <link rel="stylesheet" href="../styles.css?v=4">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css?v=5">
   </head>
   <body>
     <div class="site-shell">
       <header class="site-header">
-        <a class="brand" href="../index.html">JACOB<span>/</span>PORTFOLIO</a>
+        <a class="brand" href="../index.html">
+          <span class="brand-seal">杰</span>
+          <span class="brand-text">JACOB<span> / </span>PORTFOLIO</span>
+        </a>
         <nav class="nav" aria-label="主导航"><a href="../index.html#work">案例</a><a href="../index.html#capabilities">能力</a><a href="#records">履历</a><a href="../index.html#about">关于</a></nav>
         <div class="header-meta"><span class="status-dot"></span>RECORDS</div>
       </header>
@@ -18,7 +24,7 @@
       <main>
         <section class="case-hero">
           <div>
-            <p class="breadcrumb"><a href="../index.html">作品集</a><span>/</span><span>04</span></p>
+            <p class="breadcrumb"><a href="../index.html">作品集</a><span>/</span><span>05</span></p>
             <h1>履历与<br><em>工作成果</em></h1>
             <div class="case-meta"><span class="chip">WORK HISTORY</span><span class="chip">RECOGNITION</span><span class="chip">AI ENABLEMENT</span></div>
           </div>
@@ -57,7 +63,7 @@
 
         <section class="case-block">
           <p class="label">01 / RECORD LOGIC</p>
-          <h2>每一项荣誉，都要回答“为什么是你”。</h2>
+          <h2>每一项荣誉，都要回答"为什么是你"。</h2>
           <p>海报提供正式的结果证据，案例说明则补足项目背景、个人贡献和组织反馈。两者放在一起，履历才不只是一个漂亮标题。</p>
           <div class="record-logic">
             <div class="info-card"><span class="case-number">01</span><h3>事实</h3><p>以正式名称、时间和证据图片记录奖项或工作成果。</p></div>
@@ -78,13 +84,20 @@
         <section class="case-block">
           <p class="label">03 / NEXT UPDATE</p>
           <h2>让荣誉和具体案例互相证明。</h2>
-          <p>后续会把奖项对应的方案、工具或工作流案例回链到这里，补上时间、个人贡献与结果，让履历与作品形成完整闭环。</p>
+          <p>后续会把评选项目与工作流案例关联起来，让每一个荣誉都能对应到具体的项目页面和可验证的工作内容。</p>
         </section>
 
-        <div class="case-next"><p>返回精选案例，继续了解具体项目。</p><a class="arrow-link" href="../index.html#work">浏览全部案例</a></div>
+        <div class="case-next">
+          <p>← 上一个案例：<a href="ai-workflows.html" style="color: var(--indigo); font-weight: 600;">AI 工作流与 Skill</a></p>
+          <p></p>
+        </div>
       </main>
 
-      <footer class="footer"><span><a href="../index.html">← 返回首页</a></span><span>JACOB / RECORDS</span></footer>
+      <footer class="footer">
+        <span>JACOB / PORTFOLIO <span data-year></span></span>
+        <span>AI · PRODUCT · PRACTICE</span>
+      </footer>
     </div>
+    <script src="../script.js"></script>
   </body>
 </html>
