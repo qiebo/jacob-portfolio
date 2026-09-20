@@ -38,3 +38,9 @@ assets/recognition/*.png
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Design working files (kept local, not part of the public portfolio)
+design-demos/
+redesign/
+.workbuddy/
+.refs/

@@ -1,158 +1,504 @@
-<!doctype html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="JACOB 的个人作品集：AI 应用、软硬件原型、知识系统与工作成果。">
-    <title>JACOB / Portfolio</title>
-    <link rel="stylesheet" href="styles.css?v=4">
-  </head>
-  <body>
-    <div class="site-shell">
-      <header class="site-header">
-        <a class="brand" href="#top">JACOB<span>/</span>PORTFOLIO</a>
-        <nav class="nav" aria-label="主导航">
-          <a href="#work">案例</a>
-          <a href="#capabilities">能力</a>
-          <a href="#recognition">履历</a>
-          <a href="#about">关于</a>
-        </nav>
-        <div class="header-meta"><span class="status-dot"></span>WORK / 2026</div>
-      </header>
+<!DOCTYPE html>
+<html lang="zh-CN" class="no-js">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>JACOB · 作品集 — AI 应用开发者 / 产品实践者</title>
+<meta name="description" content="JACOB 的个人作品集：把复杂的事情，做成可以被理解的成果。AI 应用、软硬件原型、知识系统。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Geist:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#FDFDFC;
+    --bg-2:#F7F8FA;
+    --bg-3:#F1F2F5;
+    --line:rgba(12,14,20,0.09);
+    --line-2:rgba(12,14,20,0.18);
+    --text:#17181C;
+    --muted:#4B4E56;
+    --faint:#676B73;
+    --accent:#4F5BD5;
+    --accent-text:#414CC4;
+    --radius:12px;
+    --radius-img:10px;
+    --maxw:1080px;
+    --gutter:clamp(18px,4vw,40px);
+  }
 
-      <main>
-        <section class="hero" id="top">
-          <div class="hero-copy">
-            <p class="eyebrow">JACOB / AI &amp; PRODUCT PRACTICE</p>
-            <h1>把复杂的事情，<br><span>做成可以被理解的成果。</span></h1>
-            <p class="hero-lead">软硬件原型、知识系统、AI 工作流，以及真实工作中的成果记录。</p>
-            <div class="hero-actions">
-              <a class="button primary" href="#work">浏览精选案例</a>
-              <a class="inline-link" href="#about">了解我的工作方式</a>
-            </div>
-            <div class="hero-signature">
-              <div><span>Focus</span><strong>硬件 · AI · 知识 · 交付</strong></div>
-              <div><span>Approach</span><strong>理解 → 原型 → 验证</strong></div>
-            </div>
-          </div>
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:"Geist","Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    letter-spacing:.1px;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  h1,h2,h3,h4{
+    font-family:"Archivo","Geist",-apple-system,BlinkMacSystemFont,sans-serif;
+    font-weight:700;
+    letter-spacing:-.02em;
+    line-height:1.1;
+    margin:0;
+    color:#131418;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{display:block;max-width:100%;}
 
-          <div class="hero-visual" aria-label="桌面数智人一体机真实照片">
-            <div class="hero-image-main">
-              <img src="assets/desktop-digital-human/runtime-avatar.png" alt="桌面数智人一体机运行界面" width="900" height="1200">
-            </div>
-            <div class="hero-image-secondary">
-              <img src="assets/desktop-digital-human/exterior-side.png" alt="桌面数智人一体机外观" width="900" height="1200">
-            </div>
-            <div class="hero-photo-tag">01 / DESKTOP DIGITAL HUMAN</div>
-          </div>
-        </section>
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter);}
+  .eyebrow{
+    font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--accent-text);font-weight:600;margin:0 0 14px;
+  }
+  .muted{color:var(--muted);}
+  .faint{color:var(--faint);font-size:13px;}
 
-        <section class="section" id="work">
-          <div class="section-heading">
-            <div>
-              <p class="label">01 / SELECTED CASES</p>
-              <h2>每个案例，都从一个真实问题开始。</h2>
-            </div>
-            <p>用产品、系统和工作成果，呈现我如何理解问题、组织材料并推进落地。</p>
-          </div>
+  /* ---------- hairline section divider ---------- */
+  .rule{height:1px;background:var(--line);border:0;margin:0;}
 
-          <a class="feature-case" href="cases/desktop-digital-human.html">
-            <div class="feature-case-media">
-              <img src="assets/desktop-digital-human/runtime-avatar.png" alt="桌面数智人一体机亮屏运行状态" loading="lazy" width="1200" height="1600">
-            </div>
-            <div class="feature-case-copy">
-              <span class="case-number">01 / PRODUCT PRACTICE</span>
-              <h3>桌面数智人一体机</h3>
-              <p>从外观、结构、硬件集成到 AI 交互，把一个桌面数字人想法推进成可以运行的真实设备。</p>
-              <ul class="tag-list">
-                <li>软硬件协同</li>
-                <li>产品原型</li>
-                <li>Vibe Coding</li>
-              </ul>
-              <span class="arrow-link">查看完整案例</span>
-            </div>
-          </a>
+  /* ---------- nav ---------- */
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(253,253,252,.82);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:58px;}
+  .brand{font-family:"Archivo",sans-serif;font-weight:800;font-size:15px;letter-spacing:.04em;}
+  .brand .dot{color:var(--accent-text);}
+  .nav-links{display:flex;gap:26px;font-size:14px;color:var(--muted);}
+  .nav-links a{transition:color .15s ease;}
+  .nav-links a:hover{color:var(--text);}
+  @media (max-width:560px){.nav-links{display:none;}}
 
-          <div class="text-case-grid">
-            <a class="text-case" href="cases/x-bookmarks.html">
-              <span class="case-number">02 / KNOWLEDGE SYSTEM</span>
-              <h3>X 书签知识库</h3>
-              <p>把长期收藏转化为可分类、可检索、可再次使用的个人知识系统。</p>
-              <span class="arrow-link">查看案例</span>
-            </a>
-            <a class="text-case" href="cases/ai-workflows.html">
-              <span class="case-number">03 / WORKFLOW DESIGN</span>
-              <h3>AI 工作流与 Skill</h3>
-              <p>围绕真实工作场景，把重复流程整理成可复用、可验证的方法。</p>
-              <span class="arrow-link">查看案例</span>
-            </a>
-            <a class="text-case" href="cases/recognition.html">
-              <span class="case-number">04 / PROFESSIONAL RECORD</span>
-              <h3>履历与工作成果</h3>
-              <p>公司评选、AI 赋能实践和正式工作成果，作为履历证据被单独记录。</p>
-              <span class="arrow-link">查看履历</span>
-            </a>
-          </div>
-        </section>
+  /* ---------- hero ---------- */
+  .hero{padding:clamp(56px,9vw,104px) 0 clamp(40px,6vw,68px);}
+  .hero-grid{display:grid;grid-template-columns:1.5fr .9fr;gap:clamp(28px,5vw,56px);align-items:center;}
+  .hero h1{
+    font-size:clamp(52px,9vw,104px);
+    font-weight:800;letter-spacing:-.04em;margin:0 0 10px;
+  }
+  .hero .tagline{
+    font-size:clamp(20px,3.4vw,30px);font-weight:600;color:#131418;
+    letter-spacing:-.02em;margin:0 0 18px;max-width:18ch;
+  }
+  .hero p.lede{font-size:15.5px;color:var(--muted);max-width:46ch;margin:0 0 28px;}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:14px;font-weight:600;padding:11px 18px;border-radius:10px;
+    border:1px solid var(--line-2);color:var(--text);transition:border-color .15s ease,background .15s ease;
+  }
+  .btn:hover{border-color:rgba(12,14,20,.34);background:rgba(12,14,20,.03);}
+  .btn.primary{background:var(--accent);border-color:transparent;color:#fff;}
+  .btn.primary:hover{background:#414CC4;}
 
-        <section class="section capability-section" id="capabilities">
-          <div class="section-heading">
-            <div>
-              <p class="label">02 / CAPABILITY MAP</p>
-              <h2>四个入口，指向同一种工作方式。</h2>
-            </div>
-            <p>理解问题，组织信息，做出原型，留下可验证的结果。</p>
-          </div>
-          <div class="capability-grid">
-            <div class="capability"><span class="case-number">A</span><strong>理解硬件</strong><p>从外壳、主板、屏幕、音频、电池和散热看到产品如何真正运行。</p></div>
-            <div class="capability"><span class="case-number">B</span><strong>组织知识</strong><p>把分散收藏、文档与经验整理成有结构的检索系统。</p></div>
-            <div class="capability"><span class="case-number">C</span><strong>设计工作流</strong><p>把重复性工作变成输入清晰、过程可控、结果可交接的工具。</p></div>
-            <div class="capability"><span class="case-number">D</span><strong>表达成果</strong><p>让复杂项目在页面、演示、履历和证据中被快速理解。</p></div>
-          </div>
-        </section>
+  .hero-figure{
+    border:1px solid var(--line);border-radius:var(--radius-img);
+    background:var(--bg-2);padding:14px;
+    max-width:240px;margin-left:auto;
+  }
+  .hero-figure img{border-radius:8px;width:100%;}
+  .hero-figure figcaption{font-size:12px;color:var(--faint);margin-top:10px;text-align:center;}
 
-        <section class="section" id="recognition">
-          <div class="section-heading">
-            <div>
-              <p class="label">03 / PROFESSIONAL RECORD</p>
-              <h2>海报在这里代表履历，不是视觉练习。</h2>
-            </div>
-            <p>把评选名称、成果背景和组织反馈放在一起，招聘者才能看见它的分量。</p>
-          </div>
-          <div class="record-preview">
-            <div class="record-image">
-              <img src="assets/recognition/ai-innovation-award.jpg" alt="百万加冕 AI 评选获奖海报" width="900" height="1200">
-            </div>
-            <div class="record-copy">
-              <span class="case-number">AI INNOVATION AWARD</span>
-              <h3>工作成果被正式评选、被组织看见。</h3>
-              <p>这里收录公司评选获奖海报与 AI 岗位赋能相关材料，并将它们放回真实工作背景中呈现。后续会继续补充时间、个人贡献与关联项目。</p>
-              <a class="button" href="cases/recognition.html">打开履历记录</a>
-            </div>
-          </div>
-        </section>
+  @media (max-width:760px){
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-figure{margin:8px auto 0;max-width:200px;}
+  }
 
-        <section class="section" id="about">
-          <div class="section-heading">
-            <div>
-              <p class="label">04 / ABOUT</p>
-              <h2>我关心的不只是把东西做出来，也关心它能不能被理解和复用。</h2>
-            </div>
-            <p>这是一个持续更新的个人档案。案例会从“看得见”开始，再逐步补充完整的过程与结果。</p>
-          </div>
-          <div class="about-grid">
-            <p class="about-lead">理解问题，组织信息，做出原型，留下证据。</p>
-            <p class="about-note"><strong>工作重点</strong>AI 应用、软硬件原型、知识系统、业务工作流与内容交付。</p>
-            <p class="about-note"><strong>下一步</strong>继续补充 X 书签知识库的界面材料，以及精选 Skill 的实际使用案例。</p>
-          </div>
-        </section>
-      </main>
+  /* ---------- section heading ---------- */
+  .sec{padding:clamp(48px,7vw,84px) 0;}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:34px;flex-wrap:wrap;}
+  .sec-head .idx{font-family:"Archivo",sans-serif;font-size:13px;color:var(--accent-text);font-weight:600;letter-spacing:.1em;}
+  .sec-head h2{font-size:clamp(24px,4vw,34px);}
+  .sec-head .note{font-size:14px;color:var(--muted);margin-left:auto;max-width:38ch;}
 
-      <footer class="footer">
-        <span>JACOB / PORTFOLIO <span data-year></span></span>
-        <span>AI · PRODUCT · PRACTICE</span>
-      </footer>
+  /* ---------- capability grid ---------- */
+  .cap-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);}
+  .cap-cell{padding:26px 22px 30px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);}
+  .cap-cell:nth-child(4n){border-right:0;}
+  .cap-cell h3{font-size:17px;margin-bottom:10px;}
+  .cap-cell p{font-size:14px;color:var(--muted);margin:0;line-height:1.55;}
+  .cap-cell .k{font-size:12px;color:var(--faint);letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:14px;}
+  .flow{display:flex;align-items:center;gap:14px;margin-top:26px;font-size:13px;color:var(--muted);flex-wrap:wrap;}
+  .flow .step{border:1px solid var(--line-2);border-radius:999px;padding:6px 14px;}
+  .flow .arrow{color:var(--faint);}
+  @media (max-width:820px){.cap-grid{grid-template-columns:repeat(2,1fr);}.cap-cell:nth-child(4n){border-right:1px solid var(--line);}.cap-cell:nth-child(2n){border-right:0;}}
+  @media (max-width:480px){.cap-grid{grid-template-columns:1fr;}.cap-cell{border-right:0 !important;}}
+
+  /* ---------- case card base ---------- */
+  .case{border:1px solid var(--line);border-radius:var(--radius);background:#FFFFFF;box-shadow:0 1px 2px rgba(12,14,20,.04);overflow:hidden;}
+  .case-pad{padding:clamp(22px,3.4vw,34px);}
+  .case-meta{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+  .case-meta .num{font-family:"Archivo",sans-serif;font-weight:700;font-size:13px;color:var(--accent-text);letter-spacing:.08em;}
+  .case-meta .tagline-sm{font-size:12px;color:var(--faint);letter-spacing:.14em;text-transform:uppercase;}
+  .case h3{font-size:clamp(22px,3.2vw,28px);margin-bottom:14px;}
+  .case p.desc{font-size:15.5px;color:var(--muted);margin:0 0 18px;max-width:54ch;}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px;}
+  .chip{font-size:12.5px;color:var(--text);border:1px solid var(--line-2);border-radius:999px;padding:5px 12px;}
+  .chip.soft{color:var(--muted);}
+  .stack{font-size:13px;color:var(--faint);margin:0 0 16px;font-family:"Geist",monospace;}
+  .case-link{font-size:14px;color:var(--accent-text);font-weight:600;display:inline-flex;align-items:center;gap:6px;}
+  .case-link:hover{text-decoration:underline;}
+
+  /* ---------- featured (doubao) horizontal module ---------- */
+  .featured{display:grid;grid-template-columns:1.05fr .95fr;gap:0;}
+  .featured .txt{padding:clamp(26px,3.6vw,38px);border-right:1px solid var(--line);}
+  .featured .visual{padding:clamp(22px,3vw,32px);display:flex;flex-direction:column;justify-content:center;background:var(--bg-3);}
+  .featured ul.points{list-style:none;padding:0;margin:0 0 18px;}
+  .featured ul.points li{font-size:15px;color:var(--muted);padding:7px 0 7px 18px;position:relative;border-bottom:1px solid var(--line);}
+  .featured ul.points li:before{content:"";position:absolute;left:0;top:14px;width:6px;height:6px;border-radius:2px;background:var(--accent);}
+  .featured ul.points li:last-child{border-bottom:0;}
+  .shot-group{display:flex;gap:8px;max-width:460px;width:100%;}
+  .shot-group figure{margin:0;flex:1;}
+  .shot-group img{width:100%;height:auto;border:1px solid var(--line-2);border-radius:8px;background:#ffffff;}
+  .shot-cap{font-size:12px;color:var(--faint);margin-top:12px;line-height:1.5;}
+  @media (max-width:820px){
+    .featured{grid-template-columns:1fr;}
+    .featured .txt{border-right:0;border-bottom:1px solid var(--line);}
+    .shot-group{max-width:100%;}
+  }
+
+  /* ---------- digital-human (one main + one aux) ---------- */
+  .dh-grid{display:grid;grid-template-columns:1fr 360px;gap:clamp(24px,4vw,40px);align-items:center;}
+  .dh-shots{display:flex;gap:12px;justify-content:flex-end;}
+  .dh-shots figure{margin:0;}
+  .dh-shots img{max-height:360px;width:auto;border:1px solid var(--line-2);border-radius:var(--radius-img);background:#ffffff;box-shadow:0 1px 3px rgba(12,14,20,.06);}
+  .dh-shots figcaption{font-size:12px;color:var(--faint);margin-top:8px;text-align:center;}
+  @media (max-width:820px){
+    .dh-grid{grid-template-columns:1fr;}
+    .dh-shots{justify-content:flex-start;flex-wrap:wrap;}
+    .dh-shots img{max-height:300px;}
+  }
+
+  /* ---------- compact double column ---------- */
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  @media (max-width:760px){.two-col{grid-template-columns:1fr;}}
+
+  /* ---------- recognition posters ---------- */
+  .rec-grid{display:grid;grid-template-columns:1fr 300px;gap:clamp(24px,4vw,44px);align-items:center;}
+  .posters{display:flex;gap:14px;justify-content:flex-end;flex-wrap:wrap;}
+  .posters figure{margin:0;}
+  .posters img{max-height:340px;width:auto;border:1px solid var(--line-2);border-radius:var(--radius-img);background:#ffffff;box-shadow:0 1px 3px rgba(12,14,20,.06);}
+  .posters figcaption{font-size:12px;color:var(--faint);margin-top:8px;text-align:center;max-width:160px;}
+  @media (max-width:760px){
+    .rec-grid{grid-template-columns:1fr;}
+    .posters{justify-content:flex-start;}
+    .posters img{max-height:280px;}
+  }
+
+  /* ---------- about / footer ---------- */
+  .about{border-top:1px solid var(--line);padding:clamp(48px,7vw,80px) 0;}
+  .about-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(24px,5vw,56px);}
+  .about h2{font-size:clamp(26px,4vw,38px);}
+  .about p{font-size:15.5px;color:var(--muted);max-width:52ch;}
+  @media (max-width:760px){.about-grid{grid-template-columns:1fr;}}
+  footer{border-top:1px solid var(--line);padding:34px 0 56px;}
+  .foot-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:13px;color:var(--faint);}
+  .foot-inner a{color:var(--muted);}
+  .foot-inner a:hover{color:var(--text);}
+
+  /* ---------- reveal animation ---------- */
+  html.js .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease;}
+  html.js .reveal.in{opacity:1;transform:none;}
+  @media (prefers-reduced-motion:reduce){
+    html.js .reveal{opacity:1 !important;transform:none !important;transition:none !important;}
+    *{scroll-behavior:auto !important;}
+  }
+  html{scroll-behavior:smooth;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <div class="brand">JACOB<span class="dot">.</span></div>
+    <div class="nav-links">
+      <a href="#work">作品</a>
+      <a href="#capability">能力</a>
+      <a href="#about">关于</a>
     </div>
-    <script src="script.js"></script>
-  </body>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <p class="eyebrow">AI 应用开发者 · 产品实践者</p>
+      <h1>JACOB</h1>
+      <p class="tagline">把复杂的事情，做成可以被理解的成果。</p>
+      <p class="lede">华东师范大学软件工程硕士 · 远播教育集团 AI 赋能培训讲师。专注把 AI 能力落进真实可用的产品与硬件原型——全栈落地、软硬件协同、产品判断。</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#doubao">查看主打案例 →</a>
+        <a class="btn" href="https://github.com/qiebo/child-ai-companion" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </div>
+    <figure class="hero-figure reveal">
+      <img src="assets/doubao-companion/mascot.png" alt="逗包 · AI 朋友 吉祥物" loading="lazy" />
+      <figcaption>吉祥物「逗包」</figcaption>
+    </figure>
+  </div>
+</header>
+
+<div class="rule"></div>
+
+<!-- ============ CAPABILITY ============ -->
+<section class="sec" id="capability">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="idx">能力图</span>
+      <h2>从理解到验证的一条主线</h2>
+      <span class="note">把复杂问题拆成可被理解、可被交付的成果。</span>
+    </div>
+    <div class="cap-grid reveal">
+      <div class="cap-cell">
+        <span class="k">01</span>
+        <h3>理解硬件</h3>
+        <p>能读板子、接传感器、跑 Linux 环境，把软硬边界讲清楚。</p>
+      </div>
+      <div class="cap-cell">
+        <span class="k">02</span>
+        <h3>组织知识</h3>
+        <p>把零散收藏与文档结构化为可检索、可复用的个人知识系统。</p>
+      </div>
+      <div class="cap-cell">
+        <span class="k">03</span>
+        <h3>设计工作流</h3>
+        <p>把重复流程整理成可复用、可验证的方法，而非一次性脚本。</p>
+      </div>
+      <div class="cap-cell">
+        <span class="k">04</span>
+        <h3>表达成果</h3>
+        <p>用克制的版式与真实证据，让人十秒内看懂你做了什么。</p>
+      </div>
+    </div>
+    <div class="flow reveal">
+      <span class="step">理解</span><span class="arrow">→</span>
+      <span class="step">原型</span><span class="arrow">→</span>
+      <span class="step">验证</span>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- ============ WORK / CASES ============ -->
+<section class="sec" id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="idx">作品</span>
+      <h2>五个案例</h2>
+      <span class="note">按求职权重排序，文字为主、图片为证据。</span>
+    </div>
+
+    <!-- 01 逗包 · 主打横向大模块 -->
+    <article class="case featured reveal" id="doubao">
+      <div class="txt">
+        <div class="case-meta">
+          <span class="num">01</span>
+          <span class="tagline-sm">主打案例 · AI 应用</span>
+        </div>
+        <h3>逗包 · AI 朋友</h3>
+        <p class="desc">私有部署的低刺激儿童 AI 陪伴助手：服务端部署在自有主机，数据不出局域网。</p>
+        <ul class="points">
+          <li>Agent 运行时：对话状态 / 流式事件 / 受控工具循环</li>
+          <li>可插拔本地语音链路（ASR / TTS）</li>
+          <li>图片作业辅导，独立图片模型路由</li>
+          <li>视频推荐先审核后内嵌播放</li>
+          <li>严格防绕过安全策略，游戏内容跨会话边界</li>
+          <li>独立家长端：模型热配置 / PIN / 长期记忆 / 动态画像</li>
+          <li>人格设计文档迭代 V0.1 → V0.3</li>
+        </ul>
+        <div class="chips">
+          <span class="chip soft">不伪装</span>
+          <span class="chip soft">不越权</span>
+          <span class="chip soft">不外跳</span>
+          <span class="chip soft">不出网</span>
+          <span class="chip soft">不硬堵</span>
+          <span class="chip soft">不锁定</span>
+        </div>
+        <p class="stack">Node.js 22（SQLite）· React 19 · TypeScript · Vite 7 · PWA · 安卓原生 WebView 壳</p>
+        <div class="chips">
+          <span class="chip">AI 产品全栈</span>
+          <span class="chip">Agent 工程</span>
+          <span class="chip">安全设计</span>
+        </div>
+        <a class="case-link" href="https://github.com/qiebo/child-ai-companion" target="_blank" rel="noopener">github.com/qiebo/child-ai-companion ↗</a>
+      </div>
+      <div class="visual">
+        <div class="shot-group">
+          <figure>
+            <img src="assets/doubao-companion/android-home-new-conversation.png" alt="新建对话主页" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="assets/doubao-companion/android-server-connected.png" alt="对话与流式回复" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="assets/doubao-companion/android-sidebar-server-settings.png" alt="会话侧边栏与服务器设置" loading="lazy" />
+          </figure>
+        </div>
+        <p class="shot-cap">手机端竖屏界面（一组 ≤ 内容区 45%）：主页 / 流式对话 / 服务器侧边栏。</p>
+      </div>
+    </article>
+
+    <!-- 02 桌面数智人一体机 · 一主一辅 -->
+    <article class="case reveal" id="work-dh" style="margin-top:18px;">
+      <div class="case-pad">
+        <div class="dh-grid">
+          <div>
+            <div class="case-meta">
+              <span class="num">02</span>
+              <span class="tagline-sm">软硬件协同</span>
+            </div>
+            <h3>桌面数智人一体机</h3>
+            <p class="desc">从外观、结构、硬件集成到 AI 交互，把桌面数字人想法推进成可运行的真实设备。RK3576 K7，Linux 环境。</p>
+            <div class="chips">
+              <span class="chip">软硬件协同</span>
+              <span class="chip">产品原型</span>
+              <span class="chip">Vibe Coding</span>
+            </div>
+          </div>
+          <div class="dh-shots">
+            <figure>
+              <img src="assets/desktop-digital-human/runtime-avatar.png" alt="数智人亮屏运行" loading="lazy" />
+              <figcaption>亮屏运行</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/desktop-digital-human/exterior-side.png" alt="数智人外观侧面" loading="lazy" />
+              <figcaption>外观</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 03 / 04 紧凑双列 -->
+    <div class="two-col" style="margin-top:18px;">
+      <article class="case reveal" id="work-xb">
+        <div class="case-pad">
+          <div class="case-meta">
+            <span class="num">03</span>
+            <span class="tagline-sm">知识系统</span>
+          </div>
+          <h3>X 书签知识库</h3>
+          <p class="desc">把长期收藏转化为可分类、可检索、可复用的个人知识系统。</p>
+          <div class="chips">
+            <span class="chip">知识系统</span>
+            <span class="chip">检索</span>
+            <span class="chip">复用</span>
+          </div>
+        </div>
+      </article>
+      <article class="case reveal">
+        <div class="case-pad">
+          <div class="case-meta">
+            <span class="num">04</span>
+            <span class="tagline-sm">工作流</span>
+          </div>
+          <h3>AI 工作流与 Skill</h3>
+          <p class="desc">围绕真实工作场景，把重复流程整理成可复用、可验证的方法。</p>
+          <div class="chips">
+            <span class="chip">工作流</span>
+            <span class="chip">自动化</span>
+            <span class="chip">可验证</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- ============ 05 履历证据 ============ -->
+<section class="sec" id="recognition">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="idx">履历证据</span>
+      <h2>履历与工作成果</h2>
+      <span class="note">放回真实工作背景呈现，靠文案传递分量。</span>
+    </div>
+    <article class="case reveal">
+      <div class="case-pad">
+        <div class="rec-grid">
+          <div>
+            <div class="case-meta">
+              <span class="num">05</span>
+              <span class="tagline-sm">获奖 · 赋能</span>
+            </div>
+            <h3>AI INNOVATION AWARD + 岗位赋能</h3>
+            <p class="desc">AI INNOVATION AWARD（百万加冕）评选获奖，叠加面向 AI 岗位的赋能培训材料，作为真实工作成果的证据。</p>
+            <div class="chips">
+              <span class="chip">百万加冕</span>
+              <span class="chip">AI 赋能讲师</span>
+              <span class="chip">真实交付</span>
+            </div>
+          </div>
+          <div class="posters">
+            <figure>
+              <img src="assets/recognition/ai-innovation-award.jpg" alt="AI INNOVATION AWARD 获奖海报" loading="lazy" />
+              <figcaption>AI INNOVATION AWARD</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/recognition/ai-enablement-plan.jpg" alt="AI 岗位赋能计划海报" loading="lazy" />
+              <figcaption>AI 岗位赋能计划</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <p class="eyebrow">关于</p>
+      <h2>持续更新的<br />个人档案</h2>
+    </div>
+    <div class="reveal">
+      <p>JACOB —— AI 应用开发者 / 产品实践者。远播教育集团 AI 赋能培训讲师，华东师范大学软件工程硕士。</p>
+      <p class="muted">一句话主张：「把复杂的事情，做成可以被理解的成果。」关键词：AI 应用 · 软硬件原型 · 知识系统 · 工作流 · 真实交付。</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-inner">
+    <span>© JACOB · 个人作品集</span>
+    <span><a href="https://github.com/qiebo/child-ai-companion" target="_blank" rel="noopener">GitHub</a> · <a href="#work">作品</a> · <a href="#about">关于</a></span>
+  </div>
+</footer>
+
+<script>
+  // reveal on scroll, with prefers-reduced-motion graceful fallback
+  (function(){
+    var root = document.documentElement;
+    root.classList.remove('no-js');
+    root.classList.add('js');
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var items = document.querySelectorAll('.reveal');
+    if (reduce || !('IntersectionObserver' in window)) {
+      items.forEach(function(el){ el.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    items.forEach(function(el){ io.observe(el); });
+  })();
+</script>
+</body>
 </html>
