@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles.css?v=5">
+    <link rel="stylesheet" href="../styles.css?v=6">
   </head>
   <body>
     <div class="site-shell">
@@ -23,12 +23,14 @@
 
       <main>
         <section class="case-hero">
-          <div>
-            <p class="breadcrumb"><a href="../index.html">作品集</a><span>/</span><span>05</span></p>
-            <h1>履历与<br><em>工作成果</em></h1>
-            <div class="case-meta"><span class="chip">WORK HISTORY</span><span class="chip">RECOGNITION</span><span class="chip">AI ENABLEMENT</span></div>
+          <p class="breadcrumb"><a href="../index.html">作品集</a><span>/</span><span>05</span></p>
+          <h1>履历与<br><em>工作成果</em></h1>
+          <div class="case-meta">
+            <span class="chip">WORK HISTORY</span>
+            <span class="chip">RECOGNITION</span>
+            <span class="chip">AI ENABLEMENT</span>
           </div>
-          <div>
+          <div class="case-hero-bottom">
             <p class="case-intro">这里记录经过组织认可的工作成果。海报是履历证据，页面负责把它放回真实的工作背景中。</p>
             <dl class="case-aside">
               <div><dt>记录类型</dt><dd>公司评选 / 工作成果</dd></div>
@@ -39,27 +41,31 @@
           </div>
         </section>
 
-        <section class="record-gallery" id="records" aria-label="履历证据图片">
-          <article class="poster-card main">
-            <img src="../assets/recognition/ai-innovation-award.jpg" alt="百万加冕 AI 评选海报" width="900" height="1200">
-            <div class="poster-copy">
-              <span class="case-number">RECOGNITION / 01</span>
-              <h3>百万加冕 AI 评选</h3>
-              <p>项目：X-Agent 智能提效矩阵——面向真实工作场景的全链路 AI 赋能方案。记录结果：AI 创新方案入围奖。</p>
-            </div>
-          </article>
+        <!-- 海报：小图 + 文字 -->
+        <div class="record-gallery" id="records">
           <div class="poster-stack">
-            <article class="poster-card small">
-              <img src="../assets/recognition/ai-enablement-plan.jpg" alt="智启新篇 AI 岗位赋能计划海报" width="900" height="1200">
+            <div class="poster-item">
+              <div class="poster-thumb">
+                <img src="../assets/recognition/ai-innovation-award.jpg" alt="百万加冕 AI 评选海报">
+              </div>
+              <div class="poster-copy">
+                <span class="case-number">RECOGNITION / 01</span>
+                <h3>百万加冕 AI 评选</h3>
+                <p>项目：X-Agent 智能提效矩阵——面向真实工作场景的全链路 AI 赋能方案。记录结果：AI 创新方案入围奖。</p>
+              </div>
+            </div>
+            <div class="poster-item">
+              <div class="poster-thumb">
+                <img src="../assets/recognition/ai-enablement-plan.jpg" alt="智启新篇 AI 岗位赋能计划海报" loading="lazy">
+              </div>
               <div class="poster-copy">
                 <span class="case-number">RECOGNITION / 02</span>
                 <h3>AI 岗位赋能计划</h3>
                 <p>AI 岗位赋能官相关工作材料。</p>
               </div>
-            </article>
-            <div class="info-card"><span class="case-number">WHY IT MATTERS</span><h3>这是履历的一部分。</h3><p>页面按工作成果记录组织，不把它当成单独的海报设计案例。</p></div>
+            </div>
           </div>
-        </section>
+        </div>
 
         <section class="case-block">
           <p class="label">01 / RECORD LOGIC</p>
@@ -81,14 +87,8 @@
           </div>
         </section>
 
-        <section class="case-block">
-          <p class="label">03 / NEXT UPDATE</p>
-          <h2>让荣誉和具体案例互相证明。</h2>
-          <p>后续会把评选项目与工作流案例关联起来，让每一个荣誉都能对应到具体的项目页面和可验证的工作内容。</p>
-        </section>
-
         <div class="case-next">
-          <p>← 上一个案例：<a href="ai-workflows.html" style="color: var(--indigo); font-weight: 600;">AI 工作流与 Skill</a></p>
+          <p>← 上一个：<a href="ai-workflows.html">AI 工作流与 Skill</a></p>
           <p></p>
         </div>
       </main>

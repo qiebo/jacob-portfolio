@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles.css?v=5">
+    <link rel="stylesheet" href="../styles.css?v=6">
   </head>
   <body>
     <div class="site-shell">
@@ -23,12 +23,14 @@
 
       <main>
         <section class="case-hero">
-          <div>
-            <p class="breadcrumb"><a href="../index.html">作品集</a><span>/</span><span>01</span></p>
-            <h1>桌面数智人<br><em>一体机</em></h1>
-            <div class="case-meta"><span class="chip">HARDWARE</span><span class="chip">AI INTERACTION</span><span class="chip">VIBE CODING</span></div>
+          <p class="breadcrumb"><a href="../index.html">作品集</a><span>/</span><span>01</span></p>
+          <h1>桌面数智人<br><em>一体机</em></h1>
+          <div class="case-meta">
+            <span class="chip">HARDWARE</span>
+            <span class="chip">AI INTERACTION</span>
+            <span class="chip">VIBE CODING</span>
           </div>
-          <div>
+          <div class="case-hero-bottom">
             <p class="case-intro">一个从产品形态出发的软硬件协同实践：让数字人从屏幕里的概念，进入一台真实、可运行的桌面设备。</p>
             <dl class="case-aside">
               <div><dt>项目类型</dt><dd>产品原型</dd></div>
@@ -39,20 +41,25 @@
           </div>
         </section>
 
-        <section class="case-gallery" aria-label="数智人一体机图片">
-          <figure class="gallery-main">
-            <img src="../assets/desktop-digital-human/runtime-avatar.png" alt="桌面数智人一体机运行状态" width="1200" height="1600">
-            <figcaption class="gallery-caption">整机运行状态：屏幕、音频与数字人交互处于同一产品形态中。</figcaption>
+        <!-- 小图集 -->
+        <div class="mini-gallery">
+          <figure class="mini-gallery-item">
+            <img src="../assets/desktop-digital-human/runtime-avatar.png" alt="桌面数智人运行状态">
+            <figcaption>整机运行状态</figcaption>
           </figure>
-          <figure class="gallery-side">
-            <img src="../assets/desktop-digital-human/exterior-side.png" alt="桌面数智人一体机外观侧视" width="900" height="1200" loading="lazy">
-            <figcaption class="gallery-caption">外观与桌面尺度：产品首先需要成为一个真实的物件。</figcaption>
+          <figure class="mini-gallery-item">
+            <img src="../assets/desktop-digital-human/exterior-side.png" alt="桌面数智人外观侧视" loading="lazy">
+            <figcaption>外观侧视</figcaption>
           </figure>
-          <figure class="gallery-small">
-            <img src="../assets/desktop-digital-human/settings-panel.png" alt="桌面数智人一体机设置界面" width="900" height="1200" loading="lazy">
-            <figcaption class="gallery-caption">设置界面：把模型与角色配置放进可操作的产品流程。</figcaption>
+          <figure class="mini-gallery-item">
+            <img src="../assets/desktop-digital-human/internal-layout.png" alt="内部结构" loading="lazy">
+            <figcaption>内部结构</figcaption>
           </figure>
-        </section>
+          <figure class="mini-gallery-item">
+            <img src="../assets/desktop-digital-human/settings-panel.png" alt="设置界面" loading="lazy">
+            <figcaption>设置界面</figcaption>
+          </figure>
+        </div>
 
         <section class="case-block">
           <p class="label">01 / PROJECT OVERVIEW</p>
@@ -78,27 +85,7 @@
         </section>
 
         <section class="case-block">
-          <p class="label">03 / BUILD EVIDENCE</p>
-          <h2>真正的产品理解，藏在零件和装配关系里。</h2>
-          <p>外观照片说明产品如何被使用，内部照片说明它如何被做出来，界面截图则说明软件能力如何进入设备。</p>
-          <div class="case-gallery">
-            <figure class="gallery-main">
-              <img src="../assets/desktop-digital-human/internal-layout.png" alt="桌面数智人一体机内部结构与线路" width="900" height="1200" loading="lazy">
-              <figcaption class="gallery-caption">内部结构：主板、供电与线路布局是产品稳定运行的基础。</figcaption>
-            </figure>
-            <figure class="gallery-side">
-              <img src="../assets/desktop-digital-human/boot-environment.png" alt="桌面数智人一体机 Linux 启动环境" width="900" height="1200" loading="lazy">
-              <figcaption class="gallery-caption">运行环境：从系统启动看到设备的软件底座。</figcaption>
-            </figure>
-            <figure class="gallery-small">
-              <img src="../assets/desktop-digital-human/settings-panel.png" alt="桌面数智人一体机角色设置界面" width="900" height="1200" loading="lazy">
-              <figcaption class="gallery-caption">交互配置：让角色、模型和使用方式可以被调整。</figcaption>
-            </figure>
-          </div>
-        </section>
-
-        <section class="case-block">
-          <p class="label">04 / MY CONTRIBUTION</p>
+          <p class="label">03 / MY CONTRIBUTION</p>
           <h2>我在这个案例中关注四件事。</h2>
           <div class="case-columns">
             <div class="info-card"><span class="case-number">01</span><h3>形态与结构</h3><p>从桌面使用场景出发，观察外壳、屏幕与内部部件如何共同形成产品。</p></div>
@@ -108,7 +95,7 @@
         </section>
 
         <section class="case-block">
-          <p class="label">05 / OUTCOME</p>
+          <p class="label">04 / OUTCOME</p>
           <h2>留下一个可以继续迭代的产品原型。</h2>
           <ul class="result-list">
             <li>有真实外观与运行状态的桌面设备</li>
@@ -120,7 +107,7 @@
 
         <div class="case-next">
           <p></p>
-          <p>下一个案例：<a href="child-ai-companion.html" style="color: var(--indigo); font-weight: 600;">逗包 · 儿童 AI 伴侣</a> →</p>
+          <p>下一个：<a href="child-ai-companion.html">逗包 · 儿童 AI 伴侣</a> →</p>
         </div>
       </main>
 

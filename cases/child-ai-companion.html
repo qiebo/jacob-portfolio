@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles.css?v=5">
+    <link rel="stylesheet" href="../styles.css?v=6">
   </head>
   <body>
     <div class="site-shell">
@@ -23,17 +23,15 @@
 
       <main>
         <section class="case-hero">
-          <div>
-            <p class="breadcrumb"><a href="../index.html">作品集</a><span>/</span><span>02</span></p>
-            <h1>逗包 ·<br><em>儿童 AI 伴侣</em></h1>
-            <div class="case-meta">
-              <span class="chip">AI APPLICATION</span>
-              <span class="chip">FULL-STACK</span>
-              <span class="chip">PRIVACY-FIRST</span>
-              <span class="chip">CHILD SAFETY</span>
-            </div>
+          <p class="breadcrumb"><a href="../index.html">作品集</a><span>/</span><span>02</span></p>
+          <h1>逗包 ·<br><em>儿童 AI 伴侣</em></h1>
+          <div class="case-meta">
+            <span class="chip">AI APPLICATION</span>
+            <span class="chip">FULL-STACK</span>
+            <span class="chip">PRIVACY-FIRST</span>
+            <span class="chip">CHILD SAFETY</span>
           </div>
-          <div>
+          <div class="case-hero-bottom">
             <p class="case-intro">可私有部署的低刺激 AI 陪伴助手。服务端部署在自有主机上，数据不出局域网；客户端支持安卓 App、浏览器与 PWA。</p>
             <dl class="case-aside">
               <div><dt>项目类型</dt><dd>AI 应用（全栈）</dd></div>
@@ -44,25 +42,25 @@
           </div>
         </section>
 
-        <!-- App 截图展示 -->
-        <section class="app-showcase" aria-label="逗包 App 界面预览">
-          <figure class="app-screenshot">
+        <!-- App 截图：小图 4 张 -->
+        <div class="mini-gallery">
+          <figure class="mini-gallery-item app">
             <img src="../assets/child-ai-companion/android-home-new-conversation.png" alt="逗包 App 新建对话主页" loading="lazy">
-            <figcaption>新建对话主页 · 吉祥物问候与快捷入口</figcaption>
+            <figcaption>新建对话主页</figcaption>
           </figure>
-          <figure class="app-screenshot">
+          <figure class="mini-gallery-item app">
             <img src="../assets/child-ai-companion/android-server-connected.png" alt="逗包 App 对话与流式回复" loading="lazy">
-            <figcaption>对话与流式回复 · 知识点分步讲解</figcaption>
+            <figcaption>对话与流式回复</figcaption>
           </figure>
-          <figure class="app-screenshot">
+          <figure class="mini-gallery-item app">
             <img src="../assets/child-ai-companion/android-sidebar-server-settings.png" alt="逗包 App 会话侧边栏" loading="lazy">
-            <figcaption>会话侧边栏 · 历史会话与服务器设置</figcaption>
+            <figcaption>会话侧边栏</figcaption>
           </figure>
-          <figure class="app-screenshot">
+          <figure class="mini-gallery-item app">
             <img src="../assets/child-ai-companion/production-video-cards.png" alt="逗包 App 视频推荐卡片" loading="lazy">
-            <figcaption>视频推荐 · 应用内嵌播放</figcaption>
+            <figcaption>视频推荐卡片</figcaption>
           </figure>
-        </section>
+        </div>
 
         <!-- 项目概览 -->
         <section class="case-block">
@@ -155,46 +153,14 @@
           <h2>轻量、可替换、不绑定特定厂商。</h2>
           <p>项目不绑定特定模型厂商、云服务或主机形态。默认配置面向家庭局域网自托管场景，也可按需部署到其他环境。</p>
           <div class="tech-stack-grid">
-            <div class="tech-item">
-              <div class="tech-icon">N</div>
-              <strong>Node.js 22</strong>
-              <span>服务端运行时</span>
-            </div>
-            <div class="tech-item">
-              <div class="tech-icon">R</div>
-              <strong>React 19</strong>
-              <span>前端框架</span>
-            </div>
-            <div class="tech-item">
-              <div class="tech-icon">V</div>
-              <strong>Vite 7</strong>
-              <span>构建工具</span>
-            </div>
-            <div class="tech-item">
-              <div class="tech-icon">S</div>
-              <strong>SQLite</strong>
-              <span>Node built-in</span>
-            </div>
-            <div class="tech-item">
-              <div class="tech-icon">TS</div>
-              <strong>TypeScript</strong>
-              <span>类型安全</span>
-            </div>
-            <div class="tech-item">
-              <div class="tech-icon">AI</div>
-              <strong>OpenAI-compatible</strong>
-              <span>模型接入协议</span>
-            </div>
-            <div class="tech-item">
-              <div class="tech-icon">A</div>
-              <strong>Android</strong>
-              <span>WebView App</span>
-            </div>
-            <div class="tech-item">
-              <div class="tech-icon">P</div>
-              <strong>PWA</strong>
-              <span>离线壳</span>
-            </div>
+            <div class="tech-item"><div class="tech-icon">N</div><strong>Node.js 22</strong><span>服务端运行时</span></div>
+            <div class="tech-item"><div class="tech-icon">R</div><strong>React 19</strong><span>前端框架</span></div>
+            <div class="tech-item"><div class="tech-icon">V</div><strong>Vite 7</strong><span>构建工具</span></div>
+            <div class="tech-item"><div class="tech-icon">S</div><strong>SQLite</strong><span>Node built-in</span></div>
+            <div class="tech-item"><div class="tech-icon">TS</div><strong>TypeScript</strong><span>类型安全</span></div>
+            <div class="tech-item"><div class="tech-icon">AI</div><strong>OpenAI-compat</strong><span>模型接入协议</span></div>
+            <div class="tech-item"><div class="tech-icon">A</div><strong>Android</strong><span>WebView App</span></div>
+            <div class="tech-item"><div class="tech-icon">P</div><strong>PWA</strong><span>离线壳</span></div>
           </div>
         </section>
 
@@ -213,10 +179,9 @@
           </ul>
         </section>
 
-        <!-- 上一案例 / 下一案例 -->
         <div class="case-next">
-          <p>← 上一个案例：<a href="desktop-digital-human.html" style="color: var(--indigo); font-weight: 600;">桌面数智人一体机</a></p>
-          <p>下一个案例：<a href="x-bookmarks.html" style="color: var(--indigo); font-weight: 600;">X 书签知识库</a> →</p>
+          <p>← 上一个：<a href="desktop-digital-human.html">桌面数智人一体机</a></p>
+          <p>下一个：<a href="x-bookmarks.html">X 书签知识库</a> →</p>
         </div>
       </main>
 
