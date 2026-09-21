@@ -116,6 +116,8 @@ h1, h2, h3 { font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", syst
 .archive-card-index { display: grid; place-items: center; width: 48px; height: 48px; border: 1px solid rgba(255,255,255,.25); border-radius: 14px; color: #d8e2ff; font-size: 13px; font-weight: 900; }
 .archive-card h2 { margin: 0 0 8px; color: #fff; font-size: clamp(24px, 3vw, 34px); }
 .archive-card p { margin: 0; color: #bdc8df; font-size: 13px; line-height: 1.7; }
+.archive-card-visual { margin: 26px 0 20px; overflow: hidden; border: 1px solid rgba(255,255,255,.18); border-radius: 15px; background: rgba(8, 20, 48, .36); }
+.archive-card-visual img { width: 100%; height: 178px; object-fit: cover; object-position: center; }
 .archive-flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin: 34px 0 22px; }
 .archive-flow span { position: relative; min-height: 58px; padding: 9px 7px; border: 1px solid rgba(255,255,255,.14); border-radius: 10px; color: #e4eaff; background: rgba(255,255,255,.06); font-size: 11px; line-height: 1.45; text-align: center; }
 .archive-flow span:not(:last-child)::after { content: "→"; position: absolute; right: -10px; top: 18px; z-index: 2; color: #a8bcff; font-size: 12px; }
@@ -280,6 +282,7 @@ h1, h2, h3 { font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", syst
   .archive-flow { grid-template-columns: repeat(3, 1fr); }
   .archive-flow span:nth-child(3)::after { display: none; }
   .archive-flow span:nth-child(4), .archive-flow span:nth-child(5) { display: none; }
+  .archive-card-visual img { height: 154px; }
   .home-section-head { grid-template-columns: 1fr; gap: 14px; }
   .home-section-intro { margin-left: 0; }
   .collection-toolbar { align-items: flex-start; flex-direction: column; gap: 10px; }
