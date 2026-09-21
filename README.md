@@ -18,11 +18,10 @@
 - `home.css`：首页项目档案视觉与响应式布局
 - `cases/`：案例页
   - `ai-workflows.html` — 企业售前方案 AI 工作流（企业 AI 应用）
-  - `data-report-agent.html` — 数据分析报告自动生成 Agent（业务自动化）
-  - `enterprise-knowledge.html` — 售前与招投标知识库（企业知识资产）
   - `desktop-digital-human.html` — 桌面数智人一体机（软硬件产品）
   - `child-ai-companion.html` — 逗包 · 儿童 AI 伴侣（全栈 AI 应用）
   - `x-bookmarks.html` — X 知识库（知识系统 + 采集管道）
+  - `data-report-agent.html`、`enterprise-knowledge.html` — 暂存案例页，当前未放入首页集合
 - `assets/`：项目实拍、海报与图谱素材
 - `styles.css`：设计系统
 - `script.js`：年份、页眉状态、滚动显现、图片灯箱
