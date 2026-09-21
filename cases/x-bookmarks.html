@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="X 知识库：1,120+ 条收藏的只读采集与自动整理管道，沉淀为可在 Obsidian 图谱中漫游的个人知识资产。">
     <meta name="theme-color" content="#faf9f6">
-    <title>X 知识库 · Jacob</title>
+    <title>X 知识库 Jacob</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='3' y='3' width='10' height='10' fill='%232447e0'/%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,7 +36,7 @@
       <!-- ============ 案例头 ============ -->
       <section class="case-hero wrap">
         <p class="breadcrumb"><a href="../index.html">项目集合</a><span class="sep">/</span><span>项目 06</span></p>
-        <p class="eyebrow">知识系统 · AI 管道</p>
+        <p class="eyebrow">知识系统 AI 管道</p>
         <h1>X 知识库</h1>
         <p class="case-lead">把 X 收藏变成一条自动运转的知识管道：浏览器端只读采集，本地清洗与分类，最终沉淀成一座 1,120+ 条、可在 Obsidian 图谱里漫游的个人知识库。</p>
         <div class="case-chips">
@@ -57,7 +57,7 @@
       <section class="case-section" style="padding-top: 8px;">
         <div class="wrap">
           <p class="label"><b>01</b> / 系统架构</p>
-          <h2>采集与处理分离，浏览器只负责"看到"。</h2>
+          <h2>采集与处理分离浏览器只负责看到</h2>
           <p>整个系统只有采集器一个环节接触 X：它读取已登录书签页的 DOM，以 status ID 为唯一去重键，增量模式遇到已知 ID 即停止。其余一切都在本地完成——任何没有浏览器的 agent 拿到 raw JSON，都能把整条管道跑完。</p>
           <div class="card-3">
             <div class="info-card">
@@ -89,7 +89,7 @@
       <section class="case-section">
         <div class="wrap">
           <p class="label"><b>02</b> / 规模与图谱</p>
-          <h2>1,120 条收藏，在图谱里长成一张网。</h2>
+          <h2>1120 条收藏在图谱里长成一张网</h2>
           <p>每条书签沉淀为一张知识卡片，按主题与作者双索引组织。作者笔记以 @handle 命名、主题用中文命名——在 Obsidian 图谱里，三种节点一眼可分。下图是 2026 年 9 月的真实图谱视图。</p>
           <figure class="g-item feature">
             <img src="../assets/x-bookmarks/graph-view.png" alt="Obsidian 图谱视图：主题、作者与知识卡片构成的网络" width="956" height="944" loading="lazy">
@@ -108,7 +108,7 @@
       <section class="case-section">
         <div class="wrap">
           <p class="label"><b>03</b> / 工程挑战</p>
-          <h2>四个真实踩过的坑，以及各自的解法。</h2>
+          <h2>四个真实踩过的坑以及各自的解法</h2>
           <div class="safety-grid">
             <div class="safety-item">
               <h3><span class="s-num">1</span>虚拟化列表的覆盖陷阱</h3>
@@ -119,11 +119,11 @@
               <p>时间线把长文折叠到约 5 行、引用内容串进正文、长文 Article 没有正文节点——60% 以上记录受影响。新增回源修复管道按 ID 比对补全，正文总量 +73.5%；无法调和的冲突保留双语原文，绝不覆盖。</p>
             </div>
             <div class="safety-item">
-              <h3><span class="s-num">3</span>1,048 张历史卡片的迁移</h3>
+              <h3><span class="s-num">3</span>1048 张历史卡片的迁移</h3>
               <p>旧版生成的卡片缺少自动块标记，会被新版生成器静默冻结、永远不更新。写迁移器逐卡验证三重门禁（有标题、无人工后缀、内容可证明为机器产出）后再补插标记：1048/1048 通过，0 张人工内容被改动。</p>
             </div>
             <div class="safety-item">
-              <h3><span class="s-num">4</span>只读边界与防"复活"</h3>
+              <h3><span class="s-num">4</span>只读边界与防复活</h3>
               <p>全程不读 Cookie、不做任何写操作；手工删除过的书签登记进注册表——否则每次扫描都会把它们当新书签"复活"入库。哪些记录该删，始终由人决定，系统只负责执行和留痕。</p>
             </div>
           </div>
@@ -134,7 +134,7 @@
       <section class="case-section">
         <div class="wrap">
           <p class="label"><b>04</b> / 我的部分</p>
-          <h2>从信息架构到管道代码，一个人完整实现。</h2>
+          <h2>从信息架构到管道代码一个人完整实现</h2>
           <ul class="result-list">
             <li>设计"采集 / 处理"两阶段架构与 status ID 去重策略</li>
             <li>实现采集、修复、分类、媒体、校验全链路脚本（Node.js / PowerShell）</li>
@@ -147,11 +147,14 @@
       </section>
 
       <nav class="case-nav wrap" aria-label="案例导航">
-        <a href="desktop-digital-human.html">
+        <a href="child-ai-companion.html">
           <span class="dir">← 上一个项目</span>
-          <span class="ttl">桌面数智人一体机</span>
+          <span class="ttl">逗包 儿童 AI 伴侣</span>
         </a>
-        <a class="placeholder" aria-hidden="true"><span class="dir"></span><span class="ttl"></span></a>
+        <a class="next" href="ai-workflows.html">
+          <span class="dir">下一个项目 →</span>
+          <span class="ttl">企业售前方案 AI 工作流</span>
+        </a>
       </nav>
     </main>
 
