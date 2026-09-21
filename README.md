@@ -1,25 +1,28 @@
-# Jacob · 个人作品集
+# Jacob · AI 应用与软硬件项目集
 
-个人作品集网站，收录 AI 应用、软硬件原型、知识系统与 AI 工作流。
+持续更新的项目集合，收录企业 AI 应用、Agent 工作流、软硬件原型、知识系统与教育科技产品。
 用于随简历投递，在线地址：<https://qiebo.github.io/jacob-portfolio/>
 
 ## 设计
 
-现代编辑式风格，内容为主角：
+项目档案式结构，内容和证据为主角：
 
-- **配色**：暖白纸面 + 墨色文字 + 一点朱砂（仅用于编号与关键标记）
-- **字体**：Noto Serif SC（标题）+ Noto Sans SC（正文）+ Space Grotesk（数字与标签）
-- **图片**：画廊衬底式呈现，完整显示不裁切，点击可查看大图
-- **动效**：克制的滚动显现与 hover 反馈，尊重 prefers-reduced-motion
+- **首页**：项目集合入口、成果概览、类型筛选、能力边界与工作背景
+- **项目卡片**：按业务智能化、AI 应用、软硬件结合、知识系统分类
+- **案例页**：统一呈现背景、问题、我的工作、方案结构和结果证据
+- **动效**：克制的滚动显现、筛选与图片灯箱，尊重 prefers-reduced-motion
 
 ## 结构
 
-- `index.html`：首页（定位陈述 + 项目速览拼图 + 精选项目 + 能力 + 认可 + 关于）
+- `index.html`：首页（项目集合 + 成果概览 + 类型筛选 + 能力 + 工作背景 + 关于）
+- `home.css`：首页项目档案视觉与响应式布局
 - `cases/`：案例页
+  - `ai-workflows.html` — 企业售前方案 AI 工作流（企业 AI 应用）
+  - `data-report-agent.html` — 数据分析报告自动生成 Agent（业务自动化）
+  - `enterprise-knowledge.html` — 售前与招投标知识库（企业知识资产）
   - `desktop-digital-human.html` — 桌面数智人一体机（软硬件产品）
   - `child-ai-companion.html` — 逗包 · 儿童 AI 伴侣（全栈 AI 应用）
   - `x-bookmarks.html` — X 知识库（知识系统 + 采集管道）
-  - `ai-workflows.html` — AI 工作流与 Skill（方法产品化）
 - `assets/`：项目实拍、海报与图谱素材
 - `styles.css`：设计系统
 - `script.js`：年份、页眉状态、滚动显现、图片灯箱

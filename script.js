@@ -1,50 +1,53 @@
-// 页脚年份
+// 页面年份
 document.querySelectorAll('[data-year]').forEach((el) => {
   el.textContent = new Date().getFullYear();
 });
 
-// 页眉滚动状态
-const header = document.querySelector('.site-header');
+// 页眉滚动状态：首页和案例页共用
+const header = document.querySelector('.site-header, .home-header');
 if (header) {
   const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 8);
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
 }
 
-// 滚动显现（尊重 prefers-reduced-motion）
+// 滚动显现：案例页旧组件和首页的新组件都使用 .rv
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-if (!reduceMotion && 'IntersectionObserver' in window) {
-  const targets = document.querySelectorAll([
-    '.section-head',
-    '.work-card',
-    '.cap-card',
-    '.recog-posters figure',
-    '.recog-copy',
-    '.about-main',
-    '.about-facts li',
-    '.hero-copy > *',
-    '.hero-side > *',
-    '.g-item',
-    '.shot',
-    '.mascot-band',
-    '.info-card',
-    '.step-card',
-    '.safety-item',
-    '.tech-item',
-    '.poster-card',
-    '.timeline-item',
-    '.fact-row',
-    '.result-list li',
-    '.case-section .label',
-    '.case-section h2',
-  ].join(','));
+const revealTargets = document.querySelectorAll([
+  '.rv',
+  '.section-head',
+  '.work-card',
+  '.cap-card',
+  '.recog-posters figure',
+  '.recog-copy',
+  '.about-main',
+  '.about-facts li',
+  '.hero-copy > *',
+  '.hero-side > *',
+  '.g-item',
+  '.shot',
+  '.mascot-band',
+  '.info-card',
+  '.step-card',
+  '.safety-item',
+  '.tech-item',
+  '.poster-card',
+  '.timeline-item',
+  '.fact-row',
+  '.result-list li',
+  '.case-section .label',
+  '.case-section h2',
+].join(','));
 
+if (reduceMotion || !('IntersectionObserver' in window)) {
+  revealTargets.forEach((el) => el.classList.add('in'));
+} else {
   const groups = new Map();
-  targets.forEach((el) => {
+  revealTargets.forEach((el) => {
     const key = el.parentElement;
-    const i = groups.get(key) || 0;
-    groups.set(key, i + 1);
-    el.style.setProperty('--rvd', `${Math.min(i * 60, 240)}ms`);
+    const index = groups.get(key) || 0;
+    groups.set(key, index + 1);
+    el.style.setProperty('--rvd', `${Math.min(index * 60, 240)}ms`);
     el.classList.add('rv');
   });
 
@@ -57,51 +60,69 @@ if (!reduceMotion && 'IntersectionObserver' in window) {
     });
   }, { threshold: 0.05, rootMargin: '0px 0px -4% 0px' });
 
-  targets.forEach((el) => io.observe(el));
+  revealTargets.forEach((el) => io.observe(el));
 
-  // 兜底：页面加载后，把已处于视口内但未触发的元素直接显示，
-  // 防止任何时序问题导致内容停留在透明状态。
   const forceVisible = () => {
     document.querySelectorAll('.rv:not(.in)').forEach((el) => {
-      const r = el.getBoundingClientRect();
-      if (r.top < window.innerHeight * 0.96 && r.bottom > 0) el.classList.add('in');
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight * .96 && rect.bottom > 0) el.classList.add('in');
     });
   };
-  window.addEventListener('load', () => setTimeout(forceVisible, 600));
-  setTimeout(forceVisible, 1500);
+  window.addEventListener('load', () => setTimeout(forceVisible, 500));
+  setTimeout(forceVisible, 1200);
 }
 
-// 图片灯箱：点击画廊/海报图片查看完整大图
+// 项目集合筛选
+const filterButtons = document.querySelectorAll('[data-filter]');
+const projectCards = document.querySelectorAll('[data-project]');
+const collectionCount = document.querySelector('#collection-count');
+if (filterButtons.length && projectCards.length) {
+  const applyFilter = (filter) => {
+    let visible = 0;
+    projectCards.forEach((card) => {
+      const kinds = (card.dataset.kind || '').split(/\s+/);
+      const match = filter === 'all' || kinds.includes(filter);
+      card.classList.toggle('is-filtered-out', !match);
+      if (match) visible += 1;
+    });
+    filterButtons.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.filter === filter)));
+    if (collectionCount) collectionCount.textContent = `${visible} 个项目 · 持续更新`;
+  };
+  filterButtons.forEach((button) => button.addEventListener('click', () => applyFilter(button.dataset.filter)));
+}
+
+// 图片灯箱：首页项目媒体与案例页画廊共用
 const lightbox = document.querySelector('.lightbox');
 if (lightbox) {
   const lbImg = lightbox.querySelector('img');
   const lbCap = lightbox.querySelector('.lb-cap');
   const lbClose = lightbox.querySelector('.lb-close');
-
-  const openLb = (img, caption) => {
+  const closeLightbox = () => {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  };
+  const openLightbox = (img, caption) => {
     lbImg.src = img.src;
     lbImg.alt = img.alt || '';
     lbCap.textContent = caption || img.alt || '';
     lightbox.classList.add('open');
     document.body.style.overflow = 'hidden';
   };
-  const closeLb = () => {
-    lightbox.classList.remove('open');
-    document.body.style.overflow = '';
-  };
 
-  document.querySelectorAll('.g-item, .shot, .poster-card .p-media, .recog-posters figure').forEach((el) => {
-    el.addEventListener('click', () => {
-      const img = el.querySelector('img');
+  document.querySelectorAll('.media-thumb, .g-item, .shot, .poster-card .p-media, .recog-posters figure').forEach((trigger) => {
+    trigger.addEventListener('click', () => {
+      const img = trigger.querySelector('img');
       if (!img) return;
-      const cap = el.querySelector('figcaption');
-      openLb(img, cap ? cap.textContent : '');
+      const caption = trigger.dataset.caption || trigger.querySelector('figcaption')?.textContent || '';
+      openLightbox(img, caption);
     });
   });
 
-  lightbox.addEventListener('click', closeLb);
-  lbClose.addEventListener('click', closeLb);
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLb();
+  lightbox.addEventListener('click', (event) => {
+    if (event.target === lightbox) closeLightbox();
+  });
+  if (lbClose) lbClose.addEventListener('click', closeLightbox);
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
   });
 }
